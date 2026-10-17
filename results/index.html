@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Results | Answered Reviews</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<!--
+  One phone friendly results page per client.
+  The agent writes results/data/<client-key>.json each month (see data/example-7f3k2q.json)
+  and sends the client https://getansweredreviews.com/results/?c=<client-key>.
+  Use a client key with a random part (business slug plus 6 random letters) so pages are not guessable.
+  Fields: business, month, plan, score, scoreLast, reviewsAnswered, reviewsTotal, avgResponseHours,
+  newReviews, starAvg, posts, requestsSent, rank {label, list [{name, score, you}]}, highlights [], nextStep.
+  rank shows only on the Full plan and Concierge. Leave out any field you do not have.
+-->
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Answered Reviews</a>
+    <a class="call" href="mailto:rickey@answeredreviewsco.com">Email us</a>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap narrow">
+    <div id="missing" class="hidden">
+      <h1>We could not find that page.</h1>
+      <p>Please use the link from your monthly email, or email <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a>.</p>
+    </div>
+
+    <div id="report" class="hidden">
+      <p class="small" id="month"></p>
+      <h1 id="business"></h1>
+
+      <div class="card score">
+        <div class="ring" id="ring"><span id="score"></span><small>of 100</small></div>
+        <div>
+          <h2 style="margin-bottom:.2em">Answered Score</h2>
+          <p class="small" id="score-change" style="margin:0"></p>
+          <p class="small" style="margin:.4em 0 0">How well your business keeps up with its Google reviews: replies, reply speed, new reviews and your profile.</p>
+        </div>
+      </div>
+
+      <div class="stats" id="stats"></div>
+
+      <div class="card hidden" id="rank-card" style="margin-top:20px">
+        <h3 id="rank-title"></h3>
+        <ul class="rank" id="rank"></ul>
+      </div>
+
+      <div class="card hidden" id="hl-card" style="margin-top:20px">
+        <h3>This month</h3>
+        <ul id="highlights"></ul>
+      </div>
+
+      <div class="card hidden" id="next-card" style="margin-top:20px">
+        <h3>Want more?</h3>
+        <p id="next" style="margin:0"></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
+    <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
+    <p><a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a> | No contract, cancel any time.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var key = new URLSearchParams(location.search).get("c") || "";
+  function missing(){ document.getElementById("missing").classList.remove("hidden"); }
+  if (!/^[a-z0-9-]{4,80}$/.test(key)) { missing(); return; }
+  function text(id, t){ document.getElementById(id).textContent = t; }
+  function has(v){ return v !== undefined && v !== null && v !== ""; }
+  fetch("data/" + key + ".json", {cache: "no-store"}).then(function(r){
+    if (!r.ok) { throw new Error("not found"); }
+    return r.json();
+  }).then(function(d){
+    document.title = d.business + " | Answered Reviews results";
+    text("business", d.business);
+    text("month", has(d.month) ? d.month + " results" : "");
+    var s = Math.max(0, Math.min(100, Math.round(d.score || 0)));
+    text("score", s);
+    document.getElementById("ring").style.setProperty("--pct", s);
+    if (has(d.scoreLast)) {
+      var diff = s - d.scoreLast;
+      text("score-change", diff === 0 ? "Same as last month." : (diff > 0 ? "Up " + diff + " points" : "Down " + (-diff) + " points") + " from last month.");
+    }
+    var stats = [];
+    if (has(d.reviewsAnswered)) { stats.push([d.reviewsAnswered + (has(d.reviewsTotal) ? " of " + d.reviewsTotal : ""), "reviews answered"]); }
+    if (has(d.avgResponseHours)) { stats.push([d.avgResponseHours < 24 ? d.avgResponseHours + " hrs" : Math.round(d.avgResponseHours / 24 * 10) / 10 + " days", "average reply time"]); }
+    if (has(d.newReviews)) { stats.push([d.newReviews, "new reviews"]); }
+    if (has(d.starAvg)) { stats.push([d.starAvg, "star average"]); }
+    if (has(d.posts)) { stats.push([d.posts, "Google posts"]); }
+    if (has(d.requestsSent)) { stats.push([d.requestsSent, "review requests sent"]); }
+    var box = document.getElementById("stats");
+    stats.forEach(function(x){
+      var el = document.createElement("div"); el.className = "stat";
+      var b = document.createElement("b"); b.textContent = x[0];
+      var sp = document.createElement("span"); sp.textContent = x[1];
+      el.appendChild(b); el.appendChild(sp); box.appendChild(el);
+    });
+    if (d.rank && d.rank.list && d.rank.list.length) {
+      var you = 0;
+      d.rank.list.forEach(function(c, i){ if (c.you) { you = i + 1; } });
+      text("rank-title", (you ? "You are #" + you + " of " + d.rank.list.length + " " : "How you compare: ") + (d.rank.label || "nearby"));
+      var ul = document.getElementById("rank");
+      d.rank.list.forEach(function(c, i){
+        var li = document.createElement("li"); if (c.you) { li.className = "you"; }
+        var n = document.createElement("span"); n.textContent = (i + 1) + ". " + c.name;
+        var v = document.createElement("span"); v.textContent = has(c.score) ? c.score : "";
+        li.appendChild(n); li.appendChild(v); ul.appendChild(li);
+      });
+      document.getElementById("rank-card").classList.remove("hidden");
+    }
+    if (d.highlights && d.highlights.length) {
+      var hl = document.getElementById("highlights");
+      d.highlights.forEach(function(h){ var li = document.createElement("li"); li.textContent = h; hl.appendChild(li); });
+      document.getElementById("hl-card").classList.remove("hidden");
+    }
+    if (has(d.nextStep)) { text("next", d.nextStep); document.getElementById("next-card").classList.remove("hidden"); }
+    document.getElementById("report").classList.remove("hidden");
+  }).catch(missing);
+})();
+</script>
+</body>
+</html>

@@ -1,5 +1,69 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=/">
-<title>Answered Reviews</title></head>
-<body style="background:#fbf6ee;color:#241c16;font-family:system-ui,sans-serif;padding:16px"><p>Our new site is coming soon. <a href="/">Go to the home page</a>.</p></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank You | Answered Reviews</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Answered Reviews</a>
+    <a class="call" href="tel:+16159562113">615.956.2113</a>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap narrow">
+    <div id="from-signup" data-from="">
+      <h1>Thank you.</h1>
+      <p class="lead">By the next business day you will get an email from QuickBooks with your invoice.</p>
+      <p>For monthly plans, paying it turns on autopay, and right after, we send a short form about how you like to talk to customers.</p>
+      <p>Nothing is posted on your Google profile until you add us as a manager.</p>
+    </div>
+    <div id="from-onboarding" data-from="onboarding" class="hidden">
+      <h1>Thank you.</h1>
+      <p class="lead">We will email you when we have accepted your manager invite, and replies start right after.</p>
+      <p>Drafts for any 1 to 3 star review will come to you for a one tap OK before anything is posted.</p>
+    </div>
+    <div id="from-audit" data-from="audit" class="hidden">
+      <h1>Your audit is on the way.</h1>
+      <p class="lead">Watch your inbox. Most audits arrive within an hour on weekdays, 9 am to 5 pm Central. Requests after hours go out the next weekday morning.</p>
+      <p>If it is not there, check your spam folder for an email from rickey@answeredreviewsco.com.</p>
+    </div>
+    <div id="from-partner" data-from="partner" class="hidden">
+      <h1>Welcome aboard.</h1>
+      <p class="lead">We will email you by the next business day with your partner details.</p>
+      <p>When a client signs up, they just type your name in the "Who referred you?" box.</p>
+    </div>
+    <p style="margin-top:24px">Questions now? Email <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a> or call <a href="tel:+16159562113">615.956.2113</a>.</p>
+    <p><a class="btn ghost" href="index.html">Back to the home page</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
+    <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
+    <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
+  </div>
+</footer>
+<script>
+(function(){
+  var from = new URLSearchParams(location.search).get("from") || "";
+  var boxes = document.querySelectorAll("[data-from]");
+  var match = false;
+  for (var i = 0; i < boxes.length; i++) { if (boxes[i].getAttribute("data-from") === from) { match = true; } }
+  if (!match) { from = ""; }
+  for (var j = 0; j < boxes.length; j++) { boxes[j].classList.toggle("hidden", boxes[j].getAttribute("data-from") !== from); }
+})();
+</script>
+</body>
+</html>

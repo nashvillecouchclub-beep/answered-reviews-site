@@ -3,51 +3,225 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Answered Reviews | Coming soon</title>
-<meta name="description" content="Answered Reviews answers your Google reviews for you. Our new site is coming soon.">
-<meta name="robots" content="noindex">
+<title>Answered Reviews | Google review replies, done for you</title>
+<meta name="description" content="We answer every Google review for your business, in your voice. No contract, cancel any time. Plans from $99 a month, or a $49 Google profile tune up.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
-<!-- Self contained on purpose: can be copied over index.html on main by itself while the full site waits for an OK. -->
-<style>
-:root{--bg:#fbf6ee;--ink:#241c16;--muted:#55483d;--line:#e4d8c6;--accent:#8a3b22;--accent-dark:#6e2d19;--green:#2f5a43}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:18px;line-height:1.6}
-.wrap{max-width:720px;margin:0 auto;padding:0 16px}
-header{padding:18px 0;border-bottom:1px solid var(--line)}
-.brand{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.3rem;color:var(--ink);text-decoration:none}
-h1{font-family:"Fraunces",Georgia,serif;font-size:clamp(2rem,6vw,3rem);line-height:1.2;margin:0 0 .5em}
-main{padding:56px 0}
-.lead{font-size:1.2rem;color:var(--muted)}
-.talk{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 24px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
-.btn:hover{background:var(--accent-dark)}
-.btn.ghost{background:transparent;color:var(--accent-dark);border:2px solid var(--accent)}
-a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
-footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:1rem}
-footer p{margin:.2em 0}
-footer a{color:var(--muted)}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="/">Answered Reviews</a></div></header>
-<main>
+<header class="top">
   <div class="wrap">
-    <h1>Our new site is coming soon.</h1>
-    <p class="lead">Answered Reviews answers your Google reviews for you, in your voice, so every customer hears back. We are putting the finishing touches on our new site and prices.</p>
-    <p>Want to talk before then? Email or call Rickey.</p>
+    <a class="brand" href="index.html">Answered Reviews</a>
+    <nav class="links" aria-label="Main">
+      <a href="#plans">Prices</a>
+      <a href="audit.html">Free audit</a>
+      <a class="call" href="tel:+16159562113">615.956.2113</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap narrow">
+    <h1>Your Google reviews are piling up. We answer every one, in your voice.</h1>
+    <p class="lead">You run the business. We make sure every customer who leaves a Google review hears back, kindly and honestly, like you wrote it yourself.</p>
+    <p>We are a small team based in Smyrna, Tennessee. Every new review on your Google Business Profile gets a reply that sounds like you. Unhappy reviews come to you first, so nothing goes up on a hard review until you say OK.</p>
+    <p><strong>No contract. Cancel any time.</strong> You get a plain monthly report that shows exactly what we did.</p>
     <div class="talk">
-      <a class="btn" href="mailto:rickey@answeredreviewsco.com?subject=Answered%20Reviews">Email us</a>
-      <a class="btn ghost" href="tel:+16159562113">Call 615.956.2113</a>
+      <a class="btn" href="audit.html">Get a free review audit</a>
+      <a class="btn ghost" href="#plans">See prices</a>
+    </div>
+
+    <!-- VIDEO EMBED GOES HERE: replace the div.video below with the 60 second video from Rickey,
+         for example a YouTube iframe inside a div with the same aspect ratio. -->
+    <div class="video" role="img" aria-label="Video coming soon" style="margin-top:28px">
+      <div class="play" aria-hidden="true"></div>
+      <strong>Video coming soon</strong>
+    </div>
+    <p class="caption">"Hi, I am Rickey. I run a small business in Smyrna, and I started this because I know how easy it is to fall behind on reviews."</p>
+  </div>
+</section>
+
+<section class="alt" id="familiar">
+  <div class="wrap narrow">
+    <h2>Sound familiar?</h2>
+    <ul class="pains">
+      <li><span class="say">"I know I should reply. I just never get to it."</span><span class="fix">We reply to every new review for you, so nothing piles up again.</span></li>
+      <li><span class="say">"That one star review has been sitting there for weeks."</span><span class="fix">We write a calm reply that invites them to reach out, and send it to you for a one tap OK before anything is posted. Never an argument.</span></li>
+      <li><span class="say">"I never know what to say to an angry customer."</span><span class="fix">That is our whole job. You tell us your tone once, and we handle the words.</span></li>
+      <li><span class="say">"I do not want a robot talking for me."</span><span class="fix">Every reply uses your words, your sign off and your rules, and the hard ones come to you before they post. You can read, change or stop any of them.</span></li>
+      <li><span class="say">"Those review companies locked me into a year."</span><span class="fix">We never do. Every plan is month to month, and you can cancel with one email.</span></li>
+    </ul>
+    <p class="source">89 percent of people expect owners to reply to reviews, and about half read the lowest star reviews first. Sources: BrightLocal 2025 Local Consumer Review Survey; GatherUp 2025 consumer survey via Search Engine Journal.</p>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <h2>Prices</h2>
+    <p>One simple price list. Billed through QuickBooks. <strong>No contract and no fee to leave on any plan.</strong> Replies to hard reviews post as soon as you OK them. Google Business Profile itself is free from Google; you pay us only for our work.</p>
+
+    <h3 id="start">Start with a one time job</h3>
+    <div class="plans">
+      <article class="card plan" id="tuneup">
+        <span class="once">One time</span>
+        <h3>Google Profile Tune Up</h3>
+        <p class="price">$49</p>
+        <ul>
+          <li>We check and correct your hours, categories, description, services and photos</li>
+          <li>A printable QR card that takes customers straight to your Google review page</li>
+          <li>A short note on what we changed and why</li>
+        </ul>
+        <a class="btn block" href="signup.html?plan=tuneup">Get the Tune Up</a>
+      </article>
+
+      <article class="card plan" id="catchup">
+        <span class="once">One time</span>
+        <h3>Review Catch Up</h3>
+        <p>Old 1 to 3 star reviews with no reply? We write a calm, honest reply to every one, and you OK each before it is posted.</p>
+        <ul class="tiers" aria-label="Review Catch Up prices">
+          <li><span>Up to 15 unanswered</span><strong>$149</strong></li>
+          <li><span>16 to 40 unanswered</span><strong>$299</strong></li>
+          <li><span>41 to 100 unanswered</span><strong>$499</strong></li>
+          <li><span>More than 100</span><strong>By quote</strong></li>
+        </ul>
+        <p class="note">Start the $249 or $499 monthly plan within 30 days and your Catch Up fee comes off your first month, up to that month's price. Not with Replies or the founding offer.</p>
+        <a class="btn block" href="signup.html?plan=catchup">Start a Catch Up</a>
+      </article>
+    </div>
+
+    <h3 id="monthly" style="margin-top:40px">Or let us handle it every month</h3>
+    <div class="plans">
+      <article class="card plan" id="replies">
+        <h3>Replies</h3>
+        <p class="price">$99 <small>a month</small></p>
+        <p class="speed">Replies within 48 hours</p>
+        <ul>
+          <li>A reply to every new Google review, up to about 30 a month. Busy month? We still answer every one, and we talk about moving up if it keeps happening.</li>
+          <li>Written in your voice, using your words</li>
+          <li>1 to 3 star replies sent to you for a one tap OK first</li>
+          <li>A monthly report with your Answered Score</li>
+        </ul>
+        <a class="btn block" href="signup.html?plan=replies">Choose Replies</a>
+      </article>
+
+      <article class="card plan featured" id="posts">
+        <span class="tag">Founding offer: first 5 clients</span>
+        <h3>Replies + Posts</h3>
+        <p class="price">$249 <small>a month</small></p>
+        <p class="spots">First 5 clients pay $99 a month for their first 3 monthly bills. <span id="spots-left">5 of 5 spots left.</span></p>
+        <p class="speed">Replies within 48 hours</p>
+        <ul>
+          <li>Everything in Replies</li>
+          <li>One Google Business Profile post every week: news, a photo, a special or your hours</li>
+          <li>A monthly report with your Answered Score</li>
+        </ul>
+        <a class="btn block" href="signup.html?plan=posts">Choose Replies + Posts</a>
+        <a class="btn ghost block" style="margin-top:10px" href="signup.html?plan=founding">Claim a founding spot</a>
+      </article>
+
+      <article class="card plan" id="full">
+        <h3>Full</h3>
+        <p class="price">$499 <small>a month</small></p>
+        <p class="speed">Same day replies</p>
+        <ul>
+          <li>Everything in Replies + Posts</li>
+          <li>Review request emails to your own customers who agreed to hear from you. Same email for everyone, no gifts or discounts, the way Google asks.</li>
+          <li>A monthly results email with your Answered Score and how your score compares with nearby competitors</li>
+        </ul>
+        <a class="btn block" href="signup.html?plan=full">Choose Full</a>
+      </article>
+    </div>
+
+    <div class="offers">
+      <div class="card"><h3>No contract</h3><p class="small">Month to month on every plan. Cancel with one email.</p></div>
+      <div class="card"><h3>Pay yearly, get 2 months free</h3><p class="small">Pay for 10 months up front and get 12 months of service. If you cancel early, we charge the months used at the monthly price and refund the rest.</p></div>
+      <div class="card"><h3>Founding offer</h3><p class="small">Our first 5 clients get Replies + Posts for $99 a month for the first 3 monthly bills, then $249. Written into your agreement.</p></div>
+    </div>
+
+    <div class="fact">
+      <p><strong>Why it matters:</strong> only 7% of consumers don't expect a reply to their review.</p>
+      <p class="source">Source: <a href="https://brightlocal.com/research/local-consumer-review-survey-2025/" rel="noopener">BrightLocal Local Consumer Review Survey 2025</a>.</p>
+    </div>
+
+    <div class="quote-box" id="quote" style="margin-top:32px">
+      <h3>More than one location, a medical practice, or 200+ reviews?</h3>
+      <p>We put together a custom plan with faster replies and more reporting. Send us a note and we will reply with a quote.</p>
+      <a class="btn ghost" href="mailto:rickey@answeredreviewsco.com?subject=Custom%20quote">Ask for a quote</a>
     </div>
   </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><h3>Pick a plan and sign up.</h3>The sign up form lists every fee in writing and takes your written OK. We email you a QuickBooks invoice; paying it sets up autopay on monthly plans.</li>
+      <li><h3>Tell us how you talk.</h3>A short form asks for words you like, words to avoid, and how to sign replies. Then you invite us as a manager on your Google Business Profile. You stay the owner.</li>
+      <li><h3>We start replying.</h3>Happy reviews get a reply posted for you. Hard reviews come to you first for a one tap OK. Each month you get a phone friendly results page with your Answered Score.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <h2>Questions</h2>
+    <details>
+      <summary>Will the replies really sound like me?</summary>
+      <p>That is the whole job. Before we start, you tell us the words you use, the words you never use, and how you like to sign off. If a reply ever feels off, tell us and we change it.</p>
+    </details>
+    <details>
+      <summary>What happens with a bad review?</summary>
+      <p>We write a calm, honest reply that invites the customer to reach out to you directly, and send it to you first. Nothing is posted on a 1 to 3 star review until you tap OK. We never argue with a customer.</p>
+    </details>
+    <details>
+      <summary>Can you take down bad reviews or get me more stars?</summary>
+      <p>No, and nobody honestly can. Real reviews from real customers stay up. We only report a review to Google when it clearly breaks Google's own rules, like a fake review or one about a different business. What we can do is make sure every reviewer hears back from you, which is what future customers read.</p>
+    </details>
+    <details>
+      <summary>Do you reply on Facebook or Yelp?</summary>
+      <p>We work only on Google. Google allows business owners to add a manager with written permission, so that is where we post. We do not post on Facebook or Yelp for you.</p>
+    </details>
+    <details>
+      <summary>I run a dental, medical or vet practice. Is that OK?</summary>
+      <p>Yes. For health practices, replies never confirm that someone was a patient and never mention a visit, treatment, date or bill. We thank the reviewer and invite them to call the office.</p>
+    </details>
+    <details>
+      <summary>Do you own my Google profile?</summary>
+      <p>No. You stay the owner. We are added as a manager from our own Google account, never with your password. You can take our access away any time from your Google Business Profile settings, and if you ask, we help you do it within 7 business days.</p>
+    </details>
+    <details>
+      <summary>Is this an app?</summary>
+      <p>No. It is a done for you service from a small team. You get replies posted, a monthly report, and a real person to email.</p>
+    </details>
+    <details>
+      <summary>How do I cancel?</summary>
+      <p>Reply to any of our emails and say cancel. We stop at the end of your current month and end our manager access within 7 business days. No contracts and no fees to leave.</p>
+    </details>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <h2>Would you rather talk first?</h2>
+    <p>Happy to. Email us and ask for a quick 15 minute call, and we will send a few times that work. Or start with a free audit of your Google reviews.</p>
+    <div class="talk">
+      <a class="btn" href="audit.html">Get a free audit</a>
+      <a class="btn ghost" href="mailto:rickey@answeredreviewsco.com?subject=15%20minute%20call">Email us</a>
+    </div>
+  </div>
+</section>
 </main>
+
 <footer>
   <div class="wrap">
     <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
     <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
     <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
+    <p><a href="audit.html">Free audit</a> | <a href="referral.html">Referral partners</a> | <a href="https://support.google.com/business/answer/7353941" rel="noopener">Google's rules for businesses like ours</a></p>
+    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google. No contract, cancel any time.</p>
   </div>
 </footer>
 </body>

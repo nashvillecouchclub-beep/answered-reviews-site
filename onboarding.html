@@ -1,5 +1,228 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=/">
-<title>Answered Reviews</title></head>
-<body style="background:#fbf6ee;color:#241c16;font-family:system-ui,sans-serif;padding:16px"><p>Our new site is coming soon. <a href="/">Go to the home page</a>.</p></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onboarding | Answered Reviews</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Answered Reviews</a>
+    <a class="call" href="tel:+16159562113">615.956.2113</a>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap narrow">
+    <h1>Tell us how you talk</h1>
+    <p class="lead">Thanks for signing up. This takes about 10 minutes. Your answers help every reply sound like you.</p>
+
+    <form id="onboard" action="https://formsubmit.co/rickey@answeredreviewsco.com" method="POST">
+      <input type="hidden" name="_subject" value="Onboarding: Answered Reviews">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="Form" value="onboarding">
+      <input type="hidden" name="_next" value="https://getansweredreviews.com/thanks.html?from=onboarding">
+      <div class="honey" aria-hidden="true"><label for="honey">Leave this empty</label><input type="text" id="honey" name="_honey" tabindex="-1" autocomplete="off"></div>
+
+      <fieldset>
+        <legend>About your business</legend>
+        <div class="field">
+          <label for="business">Business name <span class="hint">As it shows on Google.</span></label>
+          <input type="text" id="business" name="Business name" required>
+        </div>
+        <div class="field">
+          <label for="gbp">Link to your Google Business Profile or Google Maps listing</label>
+          <input type="text" id="gbp" name="Google profile link" required>
+          <span class="hint">Search your business name on Google Maps, click your listing, click Share, then Copy link. Paste it here.</span>
+        </div>
+        <div class="field">
+          <label for="owner">Owner name</label>
+          <input type="text" id="owner" name="Owner name" required>
+        </div>
+        <div class="field">
+          <label for="email">Best email for us to reach you</label>
+          <input type="email" id="email" name="email" required>
+          <span class="hint">Drafts for 1 to 3 star reviews come here for your one tap OK.</span>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number <span class="hint" style="display:inline">(optional)</span></label>
+          <input type="tel" id="phone" name="Phone">
+        </div>
+        <div class="field">
+          <label for="plan">Which plan did you choose?</label>
+          <select id="plan" name="Plan" required>
+            <option value="">Choose one</option>
+            <option value="Replies, $99 a month">Replies, $99 a month</option>
+            <option value="Replies + Posts, $249 a month">Replies + Posts, $249 a month</option>
+            <option value="Founding offer: Replies + Posts, $99 a month for the first 3 monthly bills, then $249">Founding offer: Replies + Posts, $99 a month for the first 3 monthly bills, then $249</option>
+            <option value="Full, $499 a month">Full, $499 a month</option>
+            <option value="Google Profile Tune Up, $49 one time">Google Profile Tune Up, $49 one time</option>
+            <option value="Review Catch Up, one time">Review Catch Up, one time</option>
+          </select>
+        </div>
+        <div class="field">
+          <span class="label">Is your business a health practice? (dental, medical, med spa, chiropractic, vet, therapy)</span>
+          <div class="radios">
+            <label><input type="radio" name="Health practice" value="Yes" required> Yes</label>
+            <label><input type="radio" name="Health practice" value="No"> No</label>
+          </div>
+          <span class="hint">If yes, replies never confirm that someone was a patient and never mention a visit, treatment, date or bill. We thank the reviewer and invite them to call the office.</span>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your voice</legend>
+        <div class="field">
+          <label for="describe">In a few words, how would a regular customer describe your business?</label>
+          <input type="text" id="describe" name="How customers describe us" placeholder="friendly, family run, no fuss">
+        </div>
+        <div class="field">
+          <label for="like">Words or phrases you like to use</label>
+          <textarea id="like" name="Words we like" placeholder="y'all, thanks for stopping by, see you next time"></textarea>
+        </div>
+        <div class="field">
+          <label for="never">Words or phrases to never use</label>
+          <textarea id="never" name="Words to never use" placeholder="valued customer, we apologize for any inconvenience"></textarea>
+        </div>
+        <div class="field">
+          <span class="label">Should replies use first names of reviewers?</span>
+          <div class="radios">
+            <label><input type="radio" name="Use reviewer first names" value="Yes"> Yes</label>
+            <label><input type="radio" name="Use reviewer first names" value="No"> No</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="signoff">How should replies be signed?</label>
+          <input type="text" id="signoff" name="Sign off" placeholder="Rickey, owner">
+          <span class="hint">Examples: "Rickey, owner" or "The team at" your business, or no sign off.</span>
+        </div>
+        <div class="field">
+          <label for="always">Anything we should always mention when it fits?</label>
+          <textarea id="always" name="Always mention" placeholder="free delivery in Rutherford County, our Saturday hours"></textarea>
+        </div>
+        <div class="field">
+          <label for="avoid">Anything we should never mention?</label>
+          <textarea id="avoid" name="Never mention" placeholder="prices, staff names"></textarea>
+        </div>
+        <div class="field">
+          <label for="samples">Paste 1 or 2 replies you have written before that you liked <span class="hint" style="display:inline">(optional)</span></label>
+          <textarea id="samples" name="Sample replies"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Unhappy reviews</legend>
+        <p>Replies to 4 and 5 star reviews are posted for you. For every 1 to 3 star review we email a draft reply to the person below, and nothing is posted until they tap OK.</p>
+        <div class="field">
+          <label for="alertname">Who should get 1 to 3 star drafts? Name and email.</label>
+          <input type="text" id="alertname" name="Low review contact" required>
+        </div>
+        <div class="field">
+          <label for="direct">Phone or email we can give unhappy customers so they can reach you directly</label>
+          <input type="text" id="direct" name="Direct contact for unhappy customers" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Weekly posts and review requests</legend>
+        <p class="note">Weekly posts are on Replies + Posts and Full. Review requests are on Full only. Skip what is not on your plan.</p>
+        <div class="field">
+          <label for="ideas">Weekly post ideas: what is new, seasonal, or worth showing off?</label>
+          <textarea id="ideas" name="Weekly post ideas"></textarea>
+          <span class="hint">Photos welcome. Reply to any email from us with them attached.</span>
+        </div>
+        <div class="field">
+          <label for="reviewlink">Your direct Google review link, if you have it</label>
+          <input type="text" id="reviewlink" name="Google review link">
+          <span class="hint">If not, we will make one for you.</span>
+        </div>
+        <div class="okbox">
+          <p><strong>How review requests work (Full plan):</strong> we send one short email asking for a review to customers on your own list. Only send us customers who agreed to receive emails from you. Every email has an unsubscribe line and your business address. We ask every customer the same way, happy or not, with no gifts, discounts or targets, because Google's rules require that. We never send texts.</p>
+        </div>
+        <label class="check"><input type="checkbox" id="optin" name="Customer list only opted in" value="Yes"> Full plan: everyone on any customer list I send agreed to receive emails from my business</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Give us manager access on Google</legend>
+        <p>Takes about 2 minutes. You stay the owner. Please never send us your Google password. We add only one manager account to your profile, and we never ask for or use your login.</p>
+        <ol class="plain">
+          <li>On your computer, sign in to the Google account that owns your business profile.</li>
+          <li>Search Google for your business name, or open Google Maps and go to your listing. You will see your profile tools at the top.</li>
+          <li>Click the three dot Menu (it may say More), then Business Profile settings.</li>
+          <li>Click People and access.</li>
+          <li>Click Add at the top.</li>
+          <li>Type our email: <strong>rickey@answeredreviewsco.com</strong></li>
+          <li>Under Access, choose Manager. Please do not choose Owner.</li>
+          <li>Click Invite.</li>
+        </ol>
+        <p>We will accept the invite and email you when we are in. You can take our access away any time from the same People and access screen.</p>
+        <p class="note">Only the profile owner can add managers. If that is someone else, please forward these steps to them.</p>
+        <label class="check"><input type="checkbox" name="Manager invite sent" value="Yes"> I have sent the manager invite</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your written OK</legend>
+        <div class="okbox">
+          <p id="auth-text"></p>
+        </div>
+        <input type="hidden" id="auth-hidden" name="Authorization text" value="">
+        <ul>
+          <li>Google Business Profile itself is free from Google. You pay Answered Reviews only for our work.</li>
+          <li>All of our fees were shown to you in writing on the sign up form before any work starts.</li>
+          <li>Answered Reviews is an independent service and is not part of Google. Read <a href="https://support.google.com/business/answer/7353941" rel="noopener" target="_blank">Google's rules for businesses that manage profiles for others</a>.</li>
+          <li>You can cancel and take back full control of your profile at any time. Email us and we end our access within 7 business days, usually the same day.</li>
+          <li>We use one Google manager account for your business and never ask for or share your login.</li>
+        </ul>
+        <label class="check"><input type="checkbox" name="I agree" value="Yes" required> I agree, and I am the owner or am allowed to sign for this business</label>
+        <div class="field">
+          <label for="sig">Typed full name</label>
+          <input type="text" id="sig" name="Typed full name" required autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="title">Title <span class="hint" style="display:inline">(owner, manager, and so on)</span></label>
+          <input type="text" id="title" name="Title" required>
+        </div>
+        <div class="field">
+          <label for="date">Date</label>
+          <input type="text" id="date" name="Date signed" readonly>
+        </div>
+      </fieldset>
+
+      <button class="btn block" type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
+    <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
+    <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
+    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google. No contract, cancel any time.</p>
+  </div>
+</footer>
+<script>
+(function(){
+  var auth = "[Business name] authorizes Rickey Hallor Jr to send review requests to our customers who agreed to receive emails, and to draft and post replies to our Google reviews on our behalf.";
+  var biz = document.getElementById("business"), out = document.getElementById("auth-text"), hid = document.getElementById("auth-hidden");
+  function showAuth(){ var t = auth.replace("[Business name]", biz.value.trim() || "[Business name]"); out.textContent = t; hid.value = t; }
+  showAuth();
+  biz.addEventListener("input", showAuth);
+  document.getElementById("onboard").addEventListener("submit", showAuth);
+  var plan = document.getElementById("plan"), optin = document.getElementById("optin");
+  function needOptin(){ optin.required = plan.value.indexOf("Full") === 0; }
+  plan.addEventListener("change", needOptin); needOptin();
+  document.getElementById("date").value = new Date().toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"});
+})();
+</script>
+</body>
+</html>

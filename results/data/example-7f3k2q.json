@@ -1,0 +1,28 @@
+{
+  "business": "Example Coffee Co.",
+  "month": "October 2026",
+  "plan": "full",
+  "score": 82,
+  "scoreLast": 64,
+  "reviewsAnswered": 27,
+  "reviewsTotal": 27,
+  "avgResponseHours": 6,
+  "newReviews": 27,
+  "starAvg": 4.6,
+  "posts": 4,
+  "requestsSent": 120,
+  "rank": {
+    "label": "coffee shops within 3 miles",
+    "list": [
+      {"name": "Bean There", "score": 88},
+      {"name": "Example Coffee Co.", "score": 82, "you": true},
+      {"name": "Daily Grind", "score": 61},
+      {"name": "Corner Cup", "score": 47}
+    ]
+  },
+  "highlights": [
+    "Every review this month got a reply.",
+    "Two 2 star reviews were answered after your OK; one customer called the owner to talk it through."
+  ],
+  "nextStep": ""
+}
