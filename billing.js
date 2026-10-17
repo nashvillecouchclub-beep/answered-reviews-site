@@ -1,0 +1,22 @@
+// Price page: yearly is pre-selected (Agency plan v3 addendum). The founding offer stays monthly.
+(function () {
+  var pills = document.querySelectorAll(".billing-toggle .pill");
+  if (!pills.length) { return; }
+  function set(mode) {
+    pills.forEach(function (p) {
+      var on = p.getAttribute("data-billing") === mode;
+      p.classList.toggle("on", on);
+      p.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    document.querySelectorAll("[data-monthly][data-yearly]").forEach(function (el) {
+      el.innerHTML = el.getAttribute("data-" + mode);
+    });
+    document.querySelectorAll("a[data-plan-link]").forEach(function (a) {
+      var u = new URL(a.getAttribute("href"), location.href);
+      u.searchParams.set("billing", mode);
+      a.setAttribute("href", u.pathname.split("/").pop() + u.search);
+    });
+  }
+  pills.forEach(function (p) { p.addEventListener("click", function () { set(p.getAttribute("data-billing")); }); });
+  set("yearly");
+})();

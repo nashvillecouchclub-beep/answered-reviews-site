@@ -73,6 +73,7 @@
           <li>A printable QR card that takes customers straight to your Google review page</li>
           <li>A short note on what we changed and why</li>
         </ul>
+        <p class="note">Add a printed QR review card kit for $59, shipped.</p>
         <a class="btn block" href="signup.html?plan=tuneup">Get the Tune Up</a>
       </article>
 
@@ -92,10 +93,15 @@
     </div>
 
     <h3 id="monthly" style="margin-top:40px">Or let us handle it every month</h3>
+    <div class="billing-toggle" role="group" aria-label="How to pay">
+      <button type="button" class="pill on" data-billing="yearly" aria-pressed="true">Pay yearly, 2 months free</button>
+      <button type="button" class="pill" data-billing="monthly" aria-pressed="false">Pay monthly</button>
+    </div>
     <div class="plans">
       <article class="card plan" id="replies">
         <h3>Replies</h3>
-        <p class="price">$99 <small>a month</small></p>
+        <p class="price" data-monthly="$99 <small>a month</small>" data-yearly="$990 <small>a year</small>">$990 <small>a year</small></p>
+        <p class="note per" data-monthly="or $990 a year if you pay yearly (2 months free)" data-yearly="2 months free, same as $82.50 a month. Or $99 a month.">2 months free, same as $82.50 a month. Or $99 a month.</p>
         <p class="speed">Replies within 48 hours</p>
         <ul>
           <li>A reply to every new Google review, up to about 30 a month. Busy month? We still answer every one, and we talk about moving up if it keeps happening.</li>
@@ -103,34 +109,38 @@
           <li>1 to 3 star replies sent to you for a one tap OK first</li>
           <li>A monthly report with your Answered Score</li>
         </ul>
-        <a class="btn block" href="signup.html?plan=replies">Choose Replies</a>
+        <a class="btn block" href="signup.html?plan=replies&amp;billing=yearly" data-plan-link>Choose Replies</a>
       </article>
 
       <article class="card plan featured" id="posts">
         <span class="tag">Founding offer: first 5 clients</span>
         <h3>Replies + Posts</h3>
-        <p class="price">$249 <small>a month</small></p>
+        <p class="price" data-monthly="$249 <small>a month</small>" data-yearly="$2,490 <small>a year</small>">$2,490 <small>a year</small></p>
+        <p class="note per" data-monthly="or $2,490 a year if you pay yearly (2 months free)" data-yearly="2 months free, same as $207.50 a month. Or $249 a month.">2 months free, same as $207.50 a month. Or $249 a month.</p>
         <p class="spots">First 5 clients pay $99 a month for their first 3 monthly bills. <span id="spots-left">5 of 5 spots left.</span></p>
         <p class="speed">Replies within 48 hours</p>
         <ul>
           <li>Everything in Replies</li>
           <li>One Google Business Profile post every week: news, a photo, a special or your hours</li>
+          <li>A free QR review card kit for your counter</li>
           <li>A monthly report with your Answered Score</li>
         </ul>
-        <a class="btn block" href="signup.html?plan=posts">Choose Replies + Posts</a>
+        <a class="btn block" href="signup.html?plan=posts&amp;billing=yearly" data-plan-link>Choose Replies + Posts</a>
         <a class="btn ghost block" style="margin-top:10px" href="signup.html?plan=founding">Claim a founding spot</a>
       </article>
 
       <article class="card plan" id="full">
         <h3>Full</h3>
-        <p class="price">$499 <small>a month</small></p>
+        <p class="price" data-monthly="$499 <small>a month</small>" data-yearly="$4,990 <small>a year</small>">$4,990 <small>a year</small></p>
+        <p class="note per" data-monthly="or $4,990 a year if you pay yearly (2 months free)" data-yearly="2 months free, same as $415.83 a month. Or $499 a month.">2 months free, same as $415.83 a month. Or $499 a month.</p>
         <p class="speed">Same day replies</p>
         <ul>
           <li>Everything in Replies + Posts</li>
           <li>Review request emails to your own customers who agreed to hear from you. Same email for everyone, no gifts or discounts, the way Google asks.</li>
           <li>A monthly results email with your Answered Score and how your score compares with nearby competitors</li>
+          <li>A free QR review card kit for your counter</li>
         </ul>
-        <a class="btn block" href="signup.html?plan=full">Choose Full</a>
+        <a class="btn block" href="signup.html?plan=full&amp;billing=yearly" data-plan-link>Choose Full</a>
       </article>
     </div>
 
@@ -140,14 +150,25 @@
       <div class="card"><h3>Founding offer</h3><p class="small">Our first 5 clients get Replies + Posts for $99 a month for the first 3 monthly bills, then $249. Written into your agreement.</p></div>
     </div>
 
+    <div class="offers">
+      <div class="card" id="promise"><h3>On time promise</h3><p class="small">We reply to every new Google review within 48 hours. If any review waits longer than that in your first month, your first month is free. Replies to 1 to 3 star reviews waiting on your OK do not count against the clock.</p></div>
+      <div class="card" id="qrkit"><h3>QR review card kit</h3><p class="small">Replies + Posts and Full come with a free printable QR card on day 1 and a printed card kit with a counter stand after your first full price month. Tune Up and Replies customers can add the printed kit for $59.</p></div>
+    </div>
+
     <div class="fact">
       <p><strong>Why it matters:</strong> only 7% of consumers don't expect a reply to their review.</p>
       <p class="source">Source: <a href="https://brightlocal.com/research/local-consumer-review-survey-2025/" rel="noopener">BrightLocal Local Consumer Review Survey 2025</a>.</p>
     </div>
 
+    <div class="card plan concierge" id="concierge" style="margin-top:24px">
+      <h3>Reputation Concierge</h3>
+      <p class="price">$999 <small>a month per location</small></p>
+      <p class="note">Our most hands on service: same day replies 7 days a week, two posts a week with your photos, and a monthly report against your top 3 local competitors. Limited spots, by quote.</p>
+    </div>
+
     <div class="quote-box" id="quote" style="margin-top:32px">
       <h3>More than one location, a medical practice, or 200+ reviews?</h3>
-      <p>We put together a custom plan with faster replies and more reporting. Send us a note and we will reply with a quote.</p>
+      <p>We price monthly plans per location, with a discount for groups: 5% off at 3 to 4 locations, 10% off at 5 to 7, and 15% off at 8 to 10. Send us a note and we will reply with a quote.</p>
       <a class="btn ghost" href="mailto:rickey@answeredreviewsco.com?subject=Custom%20quote">Ask for a quote</a>
     </div>
   </div>
@@ -197,7 +218,7 @@
     </details>
     <details>
       <summary>How do I cancel?</summary>
-      <p>Reply to any of our emails and say cancel. We stop at the end of your current month and end our manager access within 7 business days. No contracts and no fees to leave.</p>
+      <p>Reply to any of our emails and say cancel, or use the <a href="cancel.html">change or cancel page</a>. We stop at the end of your current month and end our manager access within 7 business days. No contracts and no fees to leave.</p>
     </details>
   </div>
 </section>
@@ -219,9 +240,12 @@
     <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
     <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
     <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
-    <p><a href="audit.html">Free audit</a> | <a href="referral.html">Referral partners</a> | <a href="https://support.google.com/business/answer/7353941" rel="noopener">Google's rules for businesses like ours</a></p>
+    <p><a href="audit.html">Free audit</a> | <a href="referral.html">Referral partners</a> | <a href="whitelabel.html">White label</a> | <a href="https://support.google.com/business/answer/7353941" rel="noopener">Google's rules for businesses like ours</a></p>
+    <p>For your trade: <a href="trades/furniture.html">Furniture stores</a> | <a href="trades/consignment.html">Consignment shops</a> | <a href="trades/moving.html">Moving companies</a> | <a href="trades/restaurants.html">Restaurants</a> | <a href="trades/homeservices.html">HVAC and plumbing</a></p>
     <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google. No contract, cancel any time.</p>
   </div>
 </footer>
+<script src="ref.js"></script>
+<script src="billing.js"></script>
 </body>
 </html>

@@ -31,6 +31,7 @@
       <input type="hidden" name="Form" value="signup">
       <input type="hidden" name="_next" value="https://getansweredreviews.com/thanks.html">
       <input type="hidden" id="fees" name="Fees shown in writing" value="">
+      <input type="hidden" name="Partner code" value="">
       <div class="honey" aria-hidden="true"><label for="honey">Leave this empty</label><input type="text" id="honey" name="_honey" tabindex="-1" autocomplete="off"></div>
 
       <div class="plan-pick" aria-live="polite">
@@ -56,11 +57,15 @@
           <span class="hint">Not sure? Pick your best guess. We count them before we invoice and use the lower price if you guessed high. If there are more than you guessed, we email the new price and start only after you OK it.</span>
         </div>
 
+        <div id="kit-field" class="field hidden" style="margin:16px 0 0">
+          <label class="check"><input type="checkbox" id="kit" name="QR review card kit" value="Yes, add the printed kit for $59 (shipped)"> Add a printed QR review card kit with a counter stand, $59 shipped</label>
+        </div>
+
         <div id="billing-field" class="field hidden" style="margin:16px 0 0">
           <span class="label">How would you like to pay?</span>
           <div class="radios">
-            <label><input type="radio" name="Billing" value="Monthly" checked> Monthly, autopay</label>
-            <label><input type="radio" name="Billing" value="Yearly, 2 months free"> Yearly, pay for 10 months and get 12</label>
+            <label><input type="radio" name="Billing" value="Yearly, 2 months free" checked> Yearly, pay for 10 months and get 12</label>
+            <label><input type="radio" name="Billing" value="Monthly"> Monthly, autopay</label>
           </div>
         </div>
       </div>
@@ -182,6 +187,10 @@
     size.classList.toggle("hidden", k !== "catchup");
     billing.classList.toggle("hidden", !p.monthly || p.noYearly);
     if (!p.monthly || p.noYearly) { billing.querySelector('input[value="Monthly"]').checked = true; }
+    else if (!userPicked) {
+      var want = (new URLSearchParams(location.search).get("billing") || "yearly").toLowerCase();
+      billing.querySelector(want === "monthly" ? 'input[value="Monthly"]' : 'input[value^="Yearly"]').checked = true;
+    }
     var f = p.fee;
     if (k === "catchup") {
       var price = backlog.options[backlog.selectedIndex].getAttribute("data-price");
@@ -189,6 +198,10 @@
         ? "Review Catch Up, more than 100 unanswered: by quote. We count your unanswered 1 to 3 star reviews and email you a written price. Nothing is invoiced and no work starts until you OK it."
         : "Review Catch Up: $" + price + ", one time, invoiced after we count your unanswered 1 to 3 star reviews. If you start the $249 or $499 monthly plan within 30 days, this fee comes off your first month, up to that month's price. Not with Replies or the founding offer.";
     }
+    var kitOk = (k === "tuneup" || k === "replies");
+    kitBox.classList.toggle("hidden", !kitOk);
+    if (!kitOk) { kit.checked = false; }
+    if (kit.checked) { f += " Printed QR review card kit: $59, one time, shipped (plus Tennessee sales tax if it applies)."; }
     feeText.textContent = f;
     fees.value = f;
   }
@@ -200,6 +213,10 @@
   }
   var q = (new URLSearchParams(location.search).get("plan") || "").toLowerCase();
   for (var i = 0; i < sel.options.length; i++) { if (sel.options[i].getAttribute("data-key") === q) { sel.selectedIndex = i; } }
+  var userPicked = false;
+  var kitBox = document.getElementById("kit-field"), kit = document.getElementById("kit");
+  kit.addEventListener("change", show);
+  billing.querySelectorAll("input").forEach(function (r) { r.addEventListener("change", function () { userPicked = true; }); });
   show(); showAuth();
   sel.addEventListener("change", show);
   backlog.addEventListener("change", show);
@@ -223,5 +240,6 @@
   });
 })();
 </script>
+<script src="ref.js"></script>
 </body>
 </html>
