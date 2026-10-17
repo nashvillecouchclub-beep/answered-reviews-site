@@ -1,0 +1,15 @@
+# Answered Reviews site (v3)
+
+Plain static site (HTML, one shared `styles.css`, no build step), served by GitHub Pages from `main` at getansweredreviews.com (`CNAME`).
+
+Pages:
+- `index.html`: home and the one public price page. Lane anchors for cold emails: `#tuneup` (Starter), `#catchup` (Recovery), `#monthly` (Mid), `#quote` (Concierge, by quote, no price on the site). Plan anchors: `#replies`, `#posts`, `#full`. Founding spots left: `#spots-left`.
+- `audit.html`: free audit request (business name + email). FormSubmit emails it to rickey@answeredreviewsco.com.
+- `signup.html`: plan picker (`?plan=tuneup|catchup|replies|posts|founding|full`), every fee in writing, written OK with the authorization line.
+- `onboarding.html`: voice form, manager access steps, Google third party policy items, written OK.
+- `referral.html`: referral partner page (20 percent recurring) and the client free month.
+- `thanks.html`: after any form (`?from=onboarding|audit|partner`, default sign up).
+- `results/?c=<client-key>`: one phone friendly results page per client, read from `results/data/<client-key>.json` (see `results/data/example-7f3k2q.json` for the fields).
+- `coming-soon.html`: self contained holding page; copy it over `index.html` on `main` when the live site must come down.
+
+FormSubmit sends a one time confirmation email to rickey@answeredreviewsco.com the first time a form is sent. Click it once, or no form emails arrive.

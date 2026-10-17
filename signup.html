@@ -3,87 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sign up | Answered Reviews</title>
+<title>Sign Up | Answered Reviews</title>
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#fbf6ee; --card:#ffffff; --ink:#241c16; --muted:#55483d; --line:#e4d8c6;
-  --accent:#8a3b22; --accent-ink:#ffffff; --accent-dark:#6e2d19; --soft:#f3e8d6; --green:#2f5a43;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:18px;line-height:1.6;overflow-wrap:break-word}
-h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.2;margin:0 0 .5em;color:var(--ink)}
-h1{font-size:clamp(2rem,6vw,3rem);font-weight:700}
-h2{font-size:clamp(1.55rem,4.5vw,2.1rem);font-weight:700}
-h3{font-size:1.3rem}
-p{margin:0 0 1em}
-a{color:var(--accent-dark)}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:2px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
-.narrow{max-width:720px}
-header.top{padding:18px 0;border-bottom:1px solid var(--line);background:var(--bg)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.brand{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.3rem;color:var(--ink);text-decoration:none}
-.top a.call{font-weight:700;text-decoration:none;color:var(--accent-dark)}
-section{padding:48px 0}
-section.alt{background:var(--soft)}
-.lead{font-size:1.2rem;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 24px;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:1.05rem;text-decoration:none;border:0;cursor:pointer;font-family:inherit;text-align:center}
-.btn:hover{background:var(--accent-dark)}
-.btn.ghost{background:transparent;color:var(--accent-dark);border:2px solid var(--accent)}
-.btn.ghost:hover{background:#fff}
-.btn.block{display:flex;width:100%}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
-.video{aspect-ratio:16/9;width:100%;border-radius:16px;background:linear-gradient(135deg,#3b2a1f,#6e2d19);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
-.video .play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
-.video .play:after{content:"";border-left:20px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:6px}
-.video strong{font-size:1.3rem}
-.caption{color:var(--muted);font-style:italic;margin-top:12px}
-.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;align-items:stretch}
-.plan{display:flex;flex-direction:column}
-.plan.featured{border:3px solid var(--accent);position:relative}
-.tag{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;padding:4px 12px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
-.price{font-family:"Fraunces",Georgia,serif;font-size:2.2rem;font-weight:700;margin:0}
-.price small{font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:1rem;font-weight:400;color:var(--muted)}
-.spots{font-weight:700;color:var(--green);margin:.25em 0 .75em}
-.plan ul{padding-left:1.2em;margin:.5em 0 1.5em;flex:1}
-.plan li{margin-bottom:.4em}
-.note{color:var(--muted);font-size:1rem}
-.steps{list-style:none;padding:0;margin:0;display:grid;gap:16px;counter-reset:s}
-.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px 20px 76px;position:relative}
-.steps li:before{content:counter(s);position:absolute;left:20px;top:20px;width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
-details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px}
-summary{cursor:pointer;font-weight:700;padding:16px 20px;min-height:52px;list-style-position:outside}
-details p{padding:0 20px;margin-bottom:16px}
-.talk{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:1rem}
-footer p{margin:.2em 0}
-/* forms */
-form .field{margin-bottom:20px}
-label,.label{display:block;font-weight:700;margin-bottom:6px}
-.hint{display:block;font-weight:400;color:var(--muted);font-size:1rem;margin-top:2px}
-input[type=text],input[type=email],input[type=tel],input[type=url],select,textarea{width:100%;font:inherit;font-size:18px;padding:12px 14px;min-height:52px;border:2px solid #b9a88f;border-radius:10px;background:#fff;color:var(--ink)}
-textarea{min-height:110px;resize:vertical}
-input[readonly]{background:var(--soft)}
-fieldset{border:1px solid var(--line);border-radius:16px;padding:20px;margin:0 0 28px;background:var(--card);min-width:0}
-legend{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.3rem;padding:0 8px}
-.check{display:flex;gap:12px;align-items:flex-start;font-weight:700;min-height:48px;padding:8px 0}
-.check input{width:28px;height:28px;flex:0 0 28px;margin:2px 0 0;accent-color:var(--accent)}
-.radios label{display:flex;gap:12px;align-items:center;font-weight:400;min-height:48px}
-.radios input{width:24px;height:24px;flex:0 0 24px;accent-color:var(--accent)}
-.okbox{background:var(--soft);border-left:6px solid var(--accent);padding:16px 18px;border-radius:8px;margin-bottom:16px}
-.okbox p:last-child{margin:0}
-.plan-pick{background:var(--soft);border:2px solid var(--accent);border-radius:16px;padding:18px 20px;margin-bottom:28px}
-.plan-pick .price{font-size:1.6rem}
-.error{color:#a3121b;font-weight:700;margin-top:6px}
-.hidden{display:none}
-.honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-ol.plain{padding-left:1.4em}
-ol.plain li{margin-bottom:.4em}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="top">
@@ -97,24 +22,54 @@ ol.plain li{margin-bottom:.4em}
 <section>
   <div class="wrap narrow">
     <h1>Sign up</h1>
-    <p class="lead">This takes about 3 minutes. No card is needed here. We email you a QuickBooks invoice after you send this form.</p>
+    <p class="lead">This takes about 3 minutes. No card is needed here. We email you a QuickBooks invoice after you send this form, and no work starts until it is paid.</p>
 
     <form id="signup" action="https://formsubmit.co/rickey@answeredreviewsco.com" method="POST">
       <input type="hidden" name="_subject" value="New sign up: Answered Reviews">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="Form" value="signup">
       <input type="hidden" name="_next" value="https://getansweredreviews.com/thanks.html">
+      <input type="hidden" id="fees" name="Fees shown in writing" value="">
       <div class="honey" aria-hidden="true"><label for="honey">Leave this empty</label><input type="text" id="honey" name="_honey" tabindex="-1" autocomplete="off"></div>
 
       <div class="plan-pick" aria-live="polite">
         <label for="plan">Your plan</label>
         <select id="plan" name="Plan" required>
-          <option value="Replies, $150 a month" data-key="replies">Replies, $150 a month</option>
-          <option value="Founding Plan, $250 a month, price locked while you stay" data-key="founding">Founding Plan, $250 a month</option>
-          <option value="Replies plus Requests plus Weekly Posts, $400 a month" data-key="full">Replies plus Requests plus Weekly Posts, $400 a month</option>
+          <option value="Google Profile Tune Up, $49 one time" data-key="tuneup">Google Profile Tune Up, $49 one time</option>
+          <option value="Review Catch Up, one time, priced by backlog" data-key="catchup">Review Catch Up, one time</option>
+          <option value="Replies, $99 a month" data-key="replies">Replies, $99 a month</option>
+          <option value="Replies + Posts, $249 a month" data-key="posts">Replies + Posts, $249 a month</option>
+          <option value="Founding offer: Replies + Posts, $99 a month for the first 3 monthly bills, then $249 a month" data-key="founding">Founding offer: Replies + Posts, $99 a month for the first 3 monthly bills</option>
+          <option value="Full, $499 a month" data-key="full">Full, $499 a month</option>
         </select>
-        <p id="plan-desc" class="note" style="margin:10px 0 0">A reply to every new Google review within one business day, in your voice.</p>
+        <p id="plan-desc" class="note" style="margin:10px 0 0"></p>
+
+        <div id="catchup-size" class="field hidden" style="margin:16px 0 0">
+          <label for="backlog">About how many 1 to 3 star reviews have no reply?</label>
+          <select id="backlog" name="Catch Up size">
+            <option value="Up to 15 unanswered, $149" data-price="149">Up to 15, $149</option>
+            <option value="16 to 40 unanswered, $299" data-price="299">16 to 40, $299</option>
+            <option value="More than 40 unanswered, $499" data-price="499">More than 40, $499</option>
+          </select>
+          <span class="hint">Not sure? Pick your best guess. We count them before we invoice and use the lower price if you guessed high. If there are more than you guessed, we email the new price and start only after you OK it.</span>
+        </div>
+
+        <div id="billing-field" class="field hidden" style="margin:16px 0 0">
+          <span class="label">How would you like to pay?</span>
+          <div class="radios">
+            <label><input type="radio" name="Billing" value="Monthly" checked> Monthly, autopay</label>
+            <label><input type="radio" name="Billing" value="Yearly, 2 months free"> Yearly, pay for 10 months and get 12</label>
+          </div>
+        </div>
       </div>
+
+      <fieldset>
+        <legend>Fees, in writing</legend>
+        <div class="okbox"><p id="fee-text"></p></div>
+        <p class="small">Google Business Profile itself is free from Google. You pay us only for our work. No contract and no fee to leave. You can cancel any time by email.</p>
+        <label class="check"><input type="checkbox" name="Saw all fees" value="Yes" required> I have read the fees above</label>
+      </fieldset>
 
       <fieldset>
         <legend>About you and your business</legend>
@@ -136,40 +91,40 @@ ol.plain li{margin-bottom:.4em}
           <input type="tel" id="phone" name="Phone" autocomplete="tel">
         </div>
         <div class="field">
+          <label for="trade">What kind of business is it?</label>
+          <input type="text" id="trade" name="Trade" required placeholder="restaurant, HVAC, dental office, salon">
+        </div>
+        <div class="field">
           <label for="gbp">Google Business Profile link or business address</label>
           <input type="text" id="gbp" name="Google profile link or address" required>
           <span class="hint">On Google Maps, open your listing, tap Share, then Copy link. Or just type your address.</span>
-        </div>
-        <div class="field">
-          <label for="site">Website <span class="hint" style="display:inline">(optional)</span></label>
-          <input type="text" id="site" name="Website" autocomplete="url">
         </div>
         <div class="field">
           <label for="heard">How did you hear about us? <span class="hint" style="display:inline">(optional)</span></label>
           <select id="heard" name="How they heard">
             <option value="">Choose one</option>
             <option>An email from us</option>
+            <option>A free audit</option>
             <option>Google search</option>
             <option value="Referral partner or another client">A referral partner or another client</option>
-            <option>Social media</option>
             <option>Word of mouth</option>
             <option>Other</option>
           </select>
         </div>
-        <div class="field" id="referral-field">
+        <div class="field">
           <label for="referral">Who referred you? <span class="hint" style="display:inline">(optional)</span></label>
           <input type="text" id="referral" name="Referred by">
-          <span class="hint">If a referral partner or another client sent you, type their name so we can thank them.</span>
+          <span class="hint">If someone sent you, type their name so we can thank them.</span>
         </div>
       </fieldset>
 
       <fieldset>
         <legend>Your written OK</legend>
         <div class="okbox">
-          <p>I authorize Answered Reviews to draft and post replies to reviews on my Google Business Profile in my business's name. I understand I can read, change, or remove any reply, and I can tell Answered Reviews to stop at any time by email. I keep full ownership of my Google Business Profile. Answered Reviews will be added as a manager only, never as an owner, and I can remove that access whenever I choose.</p>
+          <p id="auth-text"></p>
         </div>
-        <input type="hidden" name="Authorization text" value="I authorize Answered Reviews to draft and post replies to reviews on my Google Business Profile in my business's name. I understand I can read, change, or remove any reply, and I can tell Answered Reviews to stop at any time by email. I keep full ownership of my Google Business Profile. Answered Reviews will be added as a manager only, never as an owner, and I can remove that access whenever I choose.">
-        <label class="check"><input type="checkbox" id="agree" name="I agree" value="Yes" required> I agree</label>
+        <input type="hidden" id="auth-hidden" name="Authorization text" value="">
+        <label class="check"><input type="checkbox" id="agree" name="I agree" value="Yes" required> I agree, and I am the owner or am allowed to sign for this business</label>
         <div class="field">
           <label for="sig">Typed full name</label>
           <input type="text" id="sig" name="Typed full name" required autocomplete="off">
@@ -183,7 +138,7 @@ ol.plain li{margin-bottom:.4em}
       </fieldset>
 
       <button class="btn block" type="submit">Send my sign up</button>
-      <p class="note" style="margin-top:12px">Nothing is posted on your Google profile until you add us as a manager. Cancel any time by email.</p>
+      <p class="note" style="margin-top:12px">Nothing is posted on your Google profile until you add us as a manager. Read <a href="https://support.google.com/business/answer/7353941" rel="noopener">Google's rules for businesses like ours</a>.</p>
     </form>
   </div>
 </section>
@@ -194,33 +149,63 @@ ol.plain li{margin-bottom:.4em}
     <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
     <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
     <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
-    <p>Cancel any time by email.</p>
+    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google. No contract, cancel any time.</p>
   </div>
 </footer>
 
 <script>
 (function(){
-  var desc = {
-    replies: "A reply to every new Google review within one business day, in your voice.",
-    founding: "Everything in the $400 plan. First 3 clients only. Your price stays locked while you stay.",
-    full: "Everything in Replies, plus a review request message for your team and one Google post a week."
+  var plans = {
+    tuneup:  {desc: "We check and correct your hours, categories, description, services and photos, plus a printable review QR card.",
+              fee: "Google Profile Tune Up: $49, one time, invoiced after you send this form. No monthly charge.", monthly: false},
+    catchup: {desc: "A calm, honest reply to every old 1 to 3 star review with no reply. You OK each one before it is posted.",
+              fee: null, monthly: false},
+    replies: {desc: "A reply to every new Google review (up to about 30 a month) within 48 hours, plus a monthly report.",
+              fee: "Replies: $99 a month, billed monthly with autopay, or $990 a year if you pay yearly (if you cancel early, we charge the months used at the monthly price and refund the rest). No setup fee.", monthly: true},
+    posts:   {desc: "Everything in Replies, plus one Google Business Profile post every week. Replies within 48 hours.",
+              fee: "Replies + Posts: $249 a month, billed monthly with autopay, or $2,490 a year if you pay yearly (if you cancel early, we charge the months used at the monthly price and refund the rest). No setup fee.", monthly: true},
+    founding:{desc: "Replies + Posts for $99 a month for your first 3 monthly bills, then the normal $249. First 5 clients only.",
+              fee: "Founding offer: Replies + Posts at $99 a month for your first 3 monthly invoices, then $249 a month, billed monthly with autopay. No setup fee. Not with yearly billing or a Catch Up credit. This price is written into your agreement.", monthly: true, noYearly: true},
+    full:    {desc: "Everything in Replies + Posts, same day replies, review request emails to your customers, and a monthly results email.",
+              fee: "Full: $499 a month, billed monthly with autopay, or $4,990 a year if you pay yearly (if you cancel early, we charge the months used at the monthly price and refund the rest). No setup fee.", monthly: true}
   };
-  var sel = document.getElementById("plan");
-  var out = document.getElementById("plan-desc");
-  function show(){ var k = sel.options[sel.selectedIndex].getAttribute("data-key"); out.textContent = desc[k]; }
-  var key = (new URLSearchParams(location.search).get("plan") || "").toLowerCase();
-  for (var i = 0; i < sel.options.length; i++) {
-    if (sel.options[i].getAttribute("data-key") === key) { sel.selectedIndex = i; }
+  var auth = "[Business name] authorizes Rickey Hallor Jr to send review requests to our customers who agreed to receive emails, and to draft and post replies to our Google reviews on our behalf.";
+  var sel = document.getElementById("plan"), desc = document.getElementById("plan-desc");
+  var size = document.getElementById("catchup-size"), backlog = document.getElementById("backlog");
+  var billing = document.getElementById("billing-field"), feeText = document.getElementById("fee-text"), fees = document.getElementById("fees");
+  var biz = document.getElementById("business"), authText = document.getElementById("auth-text"), authHidden = document.getElementById("auth-hidden");
+  function key(){ return sel.options[sel.selectedIndex].getAttribute("data-key"); }
+  function show(){
+    var k = key(), p = plans[k];
+    desc.textContent = p.desc;
+    size.classList.toggle("hidden", k !== "catchup");
+    billing.classList.toggle("hidden", !p.monthly || p.noYearly);
+    if (!p.monthly || p.noYearly) { billing.querySelector('input[value="Monthly"]').checked = true; }
+    var f = p.fee;
+    if (k === "catchup") {
+      var price = backlog.options[backlog.selectedIndex].getAttribute("data-price");
+      f = "Review Catch Up: $" + price + ", one time, invoiced after we count your unanswered 1 to 3 star reviews. If you start the $249 or $499 monthly plan within 30 days, this fee comes off your first month, up to that month's price. Not with Replies or the founding offer.";
+    }
+    feeText.textContent = f;
+    fees.value = f;
   }
-  show();
+  function showAuth(){
+    var name = biz.value.trim() || "[Business name]";
+    var t = auth.replace("[Business name]", name);
+    authText.textContent = t;
+    authHidden.value = t;
+  }
+  var q = (new URLSearchParams(location.search).get("plan") || "").toLowerCase();
+  for (var i = 0; i < sel.options.length; i++) { if (sel.options[i].getAttribute("data-key") === q) { sel.selectedIndex = i; } }
+  show(); showAuth();
   sel.addEventListener("change", show);
+  backlog.addEventListener("change", show);
+  biz.addEventListener("input", showAuth);
 
   document.getElementById("date").value = new Date().toLocaleDateString("en-US", {year:"numeric", month:"long", day:"numeric"});
 
   function norm(s){ return (s || "").trim().replace(/\s+/g, " ").toLowerCase(); }
-  var owner = document.getElementById("owner");
-  var sig = document.getElementById("sig");
-  var err = document.getElementById("sig-error");
+  var owner = document.getElementById("owner"), sig = document.getElementById("sig"), err = document.getElementById("sig-error");
   function check(){
     var ok = norm(sig.value) !== "" && norm(sig.value) === norm(owner.value);
     sig.setCustomValidity(ok || sig.value === "" ? "" : "The typed name must match the owner full name.");
@@ -230,6 +215,7 @@ ol.plain li{margin-bottom:.4em}
   sig.addEventListener("input", check);
   owner.addEventListener("input", function(){ if (sig.value) check(); });
   document.getElementById("signup").addEventListener("submit", function(e){
+    show(); showAuth();
     if (!check()) { e.preventDefault(); err.classList.remove("hidden"); sig.focus(); }
   });
 })();
