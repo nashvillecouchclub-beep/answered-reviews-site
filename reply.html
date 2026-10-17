@@ -9,7 +9,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<style>.sticky-send{position:sticky;bottom:0;padding:10px 0 14px;background:linear-gradient(transparent,var(--bg) 30%);z-index:5}</style>
+<style>
+/* Phone first: the whole form and its button fit on the first screen of a phone (playbook: button visible without scrolling). */
+header.top{padding:10px 0}
+.compact{padding:16px 0 32px}
+.compact h1{font-size:1.75rem;margin:0 0 .2em}
+.compact .sub{font-size:1.05rem;color:var(--muted);margin:0 0 12px;line-height:1.4}
+.compact form .field{margin-bottom:10px}
+.compact .hint{font-size:.95rem;line-height:1.35}
+.compact textarea{min-height:84px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.after-send{font-size:.95rem;color:var(--muted);margin:2px 0 0;line-height:1.35}
+.check{display:flex;gap:10px;align-items:center;font-weight:400;font-size:1rem;line-height:1.3}
+.check input{width:22px;height:22px;flex:none;margin:0}
+.sticky-send{position:sticky;bottom:0;padding:6px 0 10px;background:linear-gradient(transparent,var(--bg) 30%);z-index:5}
+</style>
 </head>
 <body>
 <header class="top">
@@ -20,10 +35,10 @@
 </header>
 
 <main>
-<section>
+<section class="compact">
   <div class="wrap narrow">
-    <h1>Not sure what to say to a review? Get a free reply.</h1>
-    <p class="lead">Paste the review below. We write a short, kind reply in plain words and email it to you, ready to post.</p>
+    <h1>Get a free reply to any Google review.</h1>
+    <p class="sub">Paste it below. We email you a short, kind reply, ready to post.</p>
 
     <form id="reply" action="https://formsubmit.co/rickey@answeredreviewsco.com" method="POST">
       <input type="hidden" name="_subject" value="Free reply request: Answered Reviews">
@@ -36,26 +51,21 @@
       <div class="field">
         <label for="review">The review</label>
         <textarea id="review" name="Review" required maxlength="4000" placeholder="Paste the review here"></textarea>
-        <span class="hint">Good or tough, any length. Leave out your customer's phone number or address.</span>
+        <span class="hint">Good or tough. No phone numbers or addresses.</span>
+      </div>
+      <div class="field row2">
+        <div><label class="sr" for="name">Your name</label><input type="text" id="name" name="Your name" required autocomplete="name" placeholder="Your name"></div>
+        <div><label class="sr" for="business">Business name</label><input type="text" id="business" name="Business name" required autocomplete="organization" placeholder="Business name"></div>
       </div>
       <div class="field">
-        <label for="name">Your name</label>
-        <input type="text" id="name" name="Your name" required autocomplete="name">
+        <label class="sr" for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="Your email">
       </div>
       <div class="field">
-        <label for="business">Business name</label>
-        <input type="text" id="business" name="Business name" required autocomplete="organization">
-      </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required autocomplete="email">
-        <span class="hint">We send your reply here, plus a few short tips. Reply stop any time.</span>
-      </div>
-      <div class="field">
-        <label><input type="checkbox" name="Health practice" value="yes"> My business is a dental, medical, therapy or vet practice</label>
-        <span class="hint">Then the reply never says the person was a patient, to keep their privacy.</span>
+        <label class="check"><input type="checkbox" name="Health practice" value="yes"> Dental, medical, therapy or vet practice</label>
       </div>
       <div class="sticky-send"><button class="btn block" type="submit">Email me my free reply</button></div>
+      <p class="after-send">We send your reply to that email, plus a few short tips. Reply stop any time.</p>
     </form>
 
     <div class="card" style="margin-top:28px">
@@ -63,6 +73,7 @@
       <ul>
         <li>A reply of 2 or 3 sentences you can copy and post on Google</li>
         <li>For a tough review: calm, owns the problem, and invites the customer to call you. Never an argument.</li>
+        <li>Health practices: the reply never says the person was a patient, to keep their privacy.</li>
         <li>Usually by the next business day. Free and yours to keep. No call needed.</li>
       </ul>
       <p class="note" style="margin:0">Want every review answered for you? <a href="index.html#plans">See prices</a>. No contract, cancel any time.</p>
