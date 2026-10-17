@@ -110,3 +110,10 @@ footer a{color:var(--muted)}
 .rank{list-style:none;padding:0;margin:0}
 .rank li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
 .rank li.you{font-weight:700;color:var(--accent-dark)}
+
+/* addendum */
+.billing-toggle{display:inline-flex;gap:6px;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px;margin:0 0 18px}
+.pill{font:inherit;font-weight:700;border:0;border-radius:999px;padding:10px 16px;min-height:44px;background:transparent;color:var(--accent-dark);cursor:pointer}
+.pill.on{background:var(--accent);color:#fff}
+.plan .per{margin:.2em 0 .4em}
+.plan.concierge{border-style:dashed}
