@@ -50,7 +50,8 @@
           <select id="backlog" name="Catch Up size">
             <option value="Up to 15 unanswered, $149" data-price="149">Up to 15, $149</option>
             <option value="16 to 40 unanswered, $299" data-price="299">16 to 40, $299</option>
-            <option value="More than 40 unanswered, $499" data-price="499">More than 40, $499</option>
+            <option value="41 to 100 unanswered, $499" data-price="499">41 to 100, $499</option>
+            <option value="More than 100 unanswered, by quote" data-price="quote">More than 100, by quote</option>
           </select>
           <span class="hint">Not sure? Pick your best guess. We count them before we invoice and use the lower price if you guessed high. If there are more than you guessed, we email the new price and start only after you OK it.</span>
         </div>
@@ -184,7 +185,9 @@
     var f = p.fee;
     if (k === "catchup") {
       var price = backlog.options[backlog.selectedIndex].getAttribute("data-price");
-      f = "Review Catch Up: $" + price + ", one time, invoiced after we count your unanswered 1 to 3 star reviews. If you start the $249 or $499 monthly plan within 30 days, this fee comes off your first month, up to that month's price. Not with Replies or the founding offer.";
+      f = price === "quote"
+        ? "Review Catch Up, more than 100 unanswered: by quote. We count your unanswered 1 to 3 star reviews and email you a written price. Nothing is invoiced and no work starts until you OK it."
+        : "Review Catch Up: $" + price + ", one time, invoiced after we count your unanswered 1 to 3 star reviews. If you start the $249 or $499 monthly plan within 30 days, this fee comes off your first month, up to that month's price. Not with Replies or the founding offer.";
     }
     feeText.textContent = f;
     fees.value = f;
