@@ -38,7 +38,7 @@ header.top{padding:10px 0}
 <section class="compact">
   <div class="wrap narrow">
     <h1>Get a free reply to any Google review.</h1>
-    <p class="sub">Paste it below. We email you a short, kind reply, ready to post.</p>
+    <p class="sub">We email you a kind reply, ready to post.</p>
 
     <form id="reply" action="https://formsubmit.co/rickey@answeredreviewsco.com" method="POST">
       <input type="hidden" name="_subject" value="Free reply request: Answered Reviews">
@@ -50,8 +50,8 @@ header.top{padding:10px 0}
       <div class="honey" aria-hidden="true"><label for="honey">Leave this empty</label><input type="text" id="honey" name="_honey" tabindex="-1" autocomplete="off"></div>
       <div class="field">
         <label for="review">The review</label>
-        <textarea id="review" name="Review" required maxlength="4000" placeholder="Paste the review here"></textarea>
-        <span class="hint">Good or tough. No phone numbers or addresses.</span>
+        <textarea id="review" name="Review" required maxlength="4000" placeholder="Paste the review here. No phone numbers or addresses." aria-describedby="review-hint"></textarea>
+        <span class="sr" id="review-hint">Good or tough. Leave out phone numbers and addresses.</span>
       </div>
       <div class="field row2">
         <div><label class="sr" for="name">Your name</label><input type="text" id="name" name="Your name" required autocomplete="name" placeholder="Your name"></div>
