@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Answered Reviews | Google review replies in your voice</title>
+<meta name="description" content="Your Google reviews are piling up. We answer every one, in your voice, within one business day. A small team in Smyrna, Tennessee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf6ee; --card:#ffffff; --ink:#241c16; --muted:#55483d; --line:#e4d8c6;
+  --accent:#8a3b22; --accent-ink:#ffffff; --accent-dark:#6e2d19; --soft:#f3e8d6; --green:#2f5a43;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:18px;line-height:1.6;overflow-wrap:break-word}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.2;margin:0 0 .5em;color:var(--ink)}
+h1{font-size:clamp(2rem,6vw,3rem);font-weight:700}
+h2{font-size:clamp(1.55rem,4.5vw,2.1rem);font-weight:700}
+h3{font-size:1.3rem}
+p{margin:0 0 1em}
+a{color:var(--accent-dark)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.narrow{max-width:720px}
+header.top{padding:18px 0;border-bottom:1px solid var(--line);background:var(--bg)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.3rem;color:var(--ink);text-decoration:none}
+.top a.call{font-weight:700;text-decoration:none;color:var(--accent-dark)}
+section{padding:48px 0}
+section.alt{background:var(--soft)}
+.lead{font-size:1.2rem;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 24px;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:1.05rem;text-decoration:none;border:0;cursor:pointer;font-family:inherit;text-align:center}
+.btn:hover{background:var(--accent-dark)}
+.btn.ghost{background:transparent;color:var(--accent-dark);border:2px solid var(--accent)}
+.btn.ghost:hover{background:#fff}
+.btn.block{display:flex;width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.video{aspect-ratio:16/9;width:100%;border-radius:16px;background:linear-gradient(135deg,#3b2a1f,#6e2d19);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
+.video .play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.video .play:after{content:"";border-left:20px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:6px}
+.video strong{font-size:1.3rem}
+.caption{color:var(--muted);font-style:italic;margin-top:12px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;align-items:stretch}
+.plan{display:flex;flex-direction:column}
+.plan.featured{border:3px solid var(--accent);position:relative}
+.tag{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;padding:4px 12px;border-radius:999px;margin-bottom:10px;align-self:flex-start}
+.price{font-family:"Fraunces",Georgia,serif;font-size:2.2rem;font-weight:700;margin:0}
+.price small{font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:1rem;font-weight:400;color:var(--muted)}
+.spots{font-weight:700;color:var(--green);margin:.25em 0 .75em}
+.plan ul{padding-left:1.2em;margin:.5em 0 1.5em;flex:1}
+.plan li{margin-bottom:.4em}
+.note{color:var(--muted);font-size:1rem}
+.pains{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.pains li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.pains .say{display:block;font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.15rem;color:var(--ink);margin-bottom:4px}
+.pains .fix{color:var(--muted)}
+.source{font-size:.9rem;color:var(--muted);margin-top:14px}
+
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:16px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px 20px 76px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:20px;top:20px;width:40px;height:40px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700;padding:16px 20px;min-height:52px;list-style-position:outside}
+details p{padding:0 20px;margin-bottom:16px}
+.talk{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:1rem}
+footer p{margin:.2em 0}
+/* forms */
+form .field{margin-bottom:20px}
+label,.label{display:block;font-weight:700;margin-bottom:6px}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:1rem;margin-top:2px}
+input[type=text],input[type=email],input[type=tel],input[type=url],select,textarea{width:100%;font:inherit;font-size:18px;padding:12px 14px;min-height:52px;border:2px solid #b9a88f;border-radius:10px;background:#fff;color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+input[readonly]{background:var(--soft)}
+fieldset{border:1px solid var(--line);border-radius:16px;padding:20px;margin:0 0 28px;background:var(--card);min-width:0}
+legend{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.3rem;padding:0 8px}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:700;min-height:48px;padding:8px 0}
+.check input{width:28px;height:28px;flex:0 0 28px;margin:2px 0 0;accent-color:var(--accent)}
+.radios label{display:flex;gap:12px;align-items:center;font-weight:400;min-height:48px}
+.radios input{width:24px;height:24px;flex:0 0 24px;accent-color:var(--accent)}
+.okbox{background:var(--soft);border-left:6px solid var(--accent);padding:16px 18px;border-radius:8px;margin-bottom:16px}
+.okbox p:last-child{margin:0}
+.plan-pick{background:var(--soft);border:2px solid var(--accent);border-radius:16px;padding:18px 20px;margin-bottom:28px}
+.plan-pick .price{font-size:1.6rem}
+.error{color:#a3121b;font-weight:700;margin-top:6px}
+.hidden{display:none}
+.honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+ol.plain{padding-left:1.4em}
+ol.plain li{margin-bottom:.4em}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Answered Reviews</a>
+    <a class="call" href="tel:+16159562113">615.956.2113</a>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap narrow">
+    <h1>Your Google reviews are piling up. We answer every one, in your voice.</h1>
+    <p class="lead">You run the business. We make sure every customer who reviews it hears back within one business day, kindly and honestly, like you wrote it yourself.</p>
+    <p>We are a small team based in Smyrna, Tennessee. We read every new Google review on your profile and post a kind, honest reply within one business day. It sounds like you, because we learn how you talk before we write a word.</p>
+    <p>You stay in charge. You can read any reply, change it, or tell us to stop.</p>
+    <p><a class="btn" href="#plans">See plans</a></p>
+
+    <!-- VIDEO EMBED GOES HERE: replace the div.video below with the 60 second video from Rickey,
+         for example a YouTube iframe inside a div with the same aspect ratio. -->
+    <div class="video" role="img" aria-label="Video coming soon">
+      <div class="play" aria-hidden="true"></div>
+      <strong>Video coming soon</strong>
+    </div>
+    <p class="caption">"Hi, I am Rickey. I run a small furniture business in Smyrna, and I started this because I know how easy it is to fall behind on reviews."</p>
+  </div>
+</section>
+
+<section class="alt" id="familiar">
+  <div class="wrap narrow">
+    <h2>Sound familiar?</h2>
+    <ul class="pains">
+      <li><span class="say">"I know I should reply. I just never get to it."</span><span class="fix">We reply to every new review within one business day, so nothing piles up again.</span></li>
+      <li><span class="say">"That one star review has been sitting there for weeks."</span><span class="fix">We flag it to you the same day and write a calm reply that invites them to reach out. Never an argument.</span></li>
+      <li><span class="say">"I never know what to say to an angry customer."</span><span class="fix">That is our whole job. You tell us your tone once, and we handle the words.</span></li>
+      <li><span class="say">"I do not want a robot talking for me."</span><span class="fix">Replies use your words, your sign off and your rules. You can read, change or stop any of them.</span></li>
+      <li><span class="say">"Do customers even read the replies?"</span><span class="fix">They do. About half of people read the lowest star reviews first, and 89 percent expect the owner to reply. Yours will always be there.</span></li>
+    </ul>
+    <p class="source">Sources: GatherUp 2025 consumer survey via Search Engine Journal; BrightLocal 2025 Local Consumer Review Survey.</p>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <h2>Plans</h2>
+    <p>Billed monthly through QuickBooks with autopay. No contracts. No setup fee. Cancel any time by email.</p>
+    <div class="plans">
+      <article class="card plan">
+        <h3>Replies</h3>
+        <p class="price">$150 <small>a month</small></p>
+        <ul>
+          <li>A reply to every new Google review within one business day</li>
+          <li>Written in your voice, using your words</li>
+          <li>1 to 3 star reviews flagged to you the same day, before we reply</li>
+          <li>A short monthly summary by email</li>
+        </ul>
+        <a class="btn block" href="signup.html?plan=replies">Choose Replies</a>
+      </article>
+
+      <article class="card plan featured">
+        <span class="tag">First 3 clients only</span>
+        <h3>Founding Plan</h3>
+        <p class="price">$250 <small>a month</small></p>
+        <p class="note">Price locked in for as long as you stay.</p>
+        <p class="spots">3 of 3 spots left</p>
+        <p>Everything in the $400 plan, at a founding price.</p>
+        <ul>
+          <li>Everything in Replies</li>
+          <li>A simple review request message your team sends to your own customers</li>
+          <li>One Google Business Profile post every week</li>
+          <li>A monthly summary that covers replies, requests, and posts</li>
+          <li>Your price never goes up while you stay with us</li>
+        </ul>
+        <a class="btn block" href="signup.html?plan=founding">Claim a founding spot</a>
+      </article>
+
+      <article class="card plan">
+        <h3>Replies plus Requests plus Weekly Posts</h3>
+        <p class="price">$400 <small>a month</small></p>
+        <ul>
+          <li>Everything in Replies</li>
+          <li>A simple review request message your team sends to every customer after a sale or job. Same message for everyone, with no gifts or discounts attached, the way Google asks.</li>
+          <li>One Google Business Profile post a week: news, a photo, a special, or your hours</li>
+          <li>A monthly summary that covers replies, requests, and posts</li>
+        </ul>
+        <a class="btn block" href="signup.html?plan=full">Choose this plan</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><h3>Pick a plan and sign up.</h3>Give us your written OK on the sign up form. We email you a QuickBooks invoice, and paying it sets up monthly autopay.</li>
+      <li><h3>Tell us how you talk.</h3>A short form asks for words you like, words to avoid, how to sign replies, and who should hear about unhappy reviews. Then you add us as a manager on your Google Business Profile. It takes about two minutes and we walk you through it.</li>
+      <li><h3>We start replying.</h3>New reviews get a reply within one business day. You get a summary each month and can change anything any time.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap narrow">
+    <h2>Questions</h2>
+    <details>
+      <summary>Will the replies really sound like me?</summary>
+      <p>That is the whole job. Before we start, you tell us the words you use, the words you never use, and how you like to sign off. If a reply ever feels off, tell us and we fix it.</p>
+    </details>
+    <details>
+      <summary>What happens with a bad review?</summary>
+      <p>For any 1 to 3 star review, we let the person you choose know the same day, before anything is posted. We write a calm, honest reply that invites the customer to reach out to you directly. We never argue with a customer.</p>
+    </details>
+    <details>
+      <summary>Can you get me more reviews or move me up in Google?</summary>
+      <p>We cannot promise either, and nobody honestly can. What we can do is make sure every customer who takes the time to write a review hears back from you.</p>
+      <p>On the Founding Plan and the $400 plan, your team also gets a simple way to ask every customer for a review. We never offer rewards for reviews, never pick only happy customers to ask, and never post fake reviews. Those things break Google's rules and can put your profile at risk.</p>
+    </details>
+    <details>
+      <summary>Do you own my Google profile?</summary>
+      <p>No. You stay the owner. We are added as a manager, which lets us reply and post. You can remove us any time from your Google Business Profile settings.</p>
+    </details>
+    <details>
+      <summary>How do I cancel?</summary>
+      <p>Email us or reply to any of our emails and say cancel. We stop at the end of your current month and remove our access. No contracts and no fees to leave.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <h2>Would you rather talk first?</h2>
+    <p>Happy to. Email us and ask for a quick 15 minute call, and we will send a few times that work. You can also reach Rickey at 615.956.2113.</p>
+    <div class="talk">
+      <a class="btn" href="mailto:rickey@answeredreviewsco.com?subject=15%20minute%20call">Email us</a>
+      <a class="btn ghost" href="tel:+16159562113">Call 615.956.2113</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
+    <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
+    <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
+    <p>Cancel any time by email.</p>
+  </div>
+</footer>
+</body>
+</html>
