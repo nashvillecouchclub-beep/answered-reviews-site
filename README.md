@@ -7,8 +7,9 @@ Pages:
 - `audit.html`: free audit request (business name + email). FormSubmit emails it to rickey@answeredreviewsco.com.
 - `signup.html`: plan picker (`?plan=tuneup|catchup|replies|posts|founding|full`), every fee in writing, written OK with the authorization line.
 - `onboarding.html`: voice form, manager access steps, Google third party policy items, written OK.
+- `reply.html`: free review reply tool. Owner pastes a review plus name, business and email; FormSubmit emails it to rickey@answeredreviewsco.com with subject "Free reply request: Answered Reviews" (Form reply). An agent writes the reply and emails it. Lands on `thanks.html?from=reply`.
 - `referral.html`: referral partner page (20 percent recurring) and the client free month.
-- `thanks.html`: after any form (`?from=onboarding|audit|partner`, default sign up).
+- `thanks.html`: after any form (`?from=onboarding|audit|partner|reply`, default sign up).
 - `results/?c=<client-key>`: one phone friendly results page per client, read from `results/data/<client-key>.json` (see `results/data/example-7f3k2q.json` for the fields).
 - `coming-soon.html`: self contained holding page; copy it over `index.html` on `main` when the live site must come down.
 

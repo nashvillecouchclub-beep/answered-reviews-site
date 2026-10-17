@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Google Review Reply | Answered Reviews</title>
+<meta name="description" content="Paste a Google review and we email you a reply you can post as is. Free, for good reviews and tough ones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Answered Reviews</a>
+    <a class="call" href="tel:+16159562113">615.956.2113</a>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap narrow">
+    <h1>Not sure what to say to a review? Get a free reply.</h1>
+    <p class="lead">Paste the review below. We write a short, kind reply in plain words and email it to you, ready to post.</p>
+
+    <form id="reply" action="https://formsubmit.co/rickey@answeredreviewsco.com" method="POST">
+      <input type="hidden" name="_subject" value="Free reply request: Answered Reviews">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="Form" value="reply">
+      <input type="hidden" name="Partner code" value="">
+      <input type="hidden" name="_next" value="https://getansweredreviews.com/thanks.html?from=reply">
+      <div class="honey" aria-hidden="true"><label for="honey">Leave this empty</label><input type="text" id="honey" name="_honey" tabindex="-1" autocomplete="off"></div>
+      <div class="field">
+        <label for="review">The review</label>
+        <textarea id="review" name="Review" required maxlength="4000" placeholder="Paste the review here"></textarea>
+        <span class="hint">Good or tough, any length. Leave out your customer's phone number or address.</span>
+      </div>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="Your name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="business">Business name</label>
+        <input type="text" id="business" name="Business name" required autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+        <span class="hint">We send your reply here, plus a few short tips. Reply stop any time.</span>
+      </div>
+      <div class="field">
+        <label><input type="checkbox" name="Health practice" value="yes"> My business is a dental, medical, therapy or vet practice</label>
+        <span class="hint">Then the reply never says the person was a patient, to keep their privacy.</span>
+      </div>
+      <button class="btn block" type="submit">Email me my free reply</button>
+    </form>
+
+    <div class="card" style="margin-top:28px">
+      <h3>What you get</h3>
+      <ul>
+        <li>A reply of 2 or 3 sentences you can copy and post on Google</li>
+        <li>For a tough review: calm, owns the problem, and invites the customer to call you. Never an argument.</li>
+        <li>Usually by the next business day. Free and yours to keep. No call needed.</li>
+      </ul>
+      <p class="note" style="margin:0">Want every review answered for you? <a href="index.html#plans">See prices</a>. No contract, cancel any time.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
+    <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
+    <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
+    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google.</p>
+  </div>
+</footer>
+<script src="ref.js"></script>
+</body>
+</html>
