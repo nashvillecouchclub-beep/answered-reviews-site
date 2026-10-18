@@ -76,7 +76,7 @@ legend{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.3rem;pad
 .plan-pick .price{font-size:1.6rem}
 .error{color:#a3121b;font-weight:700;margin-top:6px}
 .hidden{display:none}
-.honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.honey{display:none}
 ol.plain{padding-left:1.4em}
 ol.plain li{margin-bottom:.4em}
 
