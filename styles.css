@@ -152,3 +152,9 @@ footer .small{color:#C3CFE3}
 .t-card ul li strong{font-family:"Fraunces",Georgia,serif;white-space:nowrap}
 /* Easy to read on a phone: small print at 18px (Rickey Oct 20 copy review) */
 .small,.note,.hint,.source{font-size:18px}
+
+/* Why do you need us? (Rickey Oct 20 6:26 pm): plain reasons right under the hero */
+.why-us h2{margin-bottom:.3em}
+.reasons{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+.reasons li{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:12px;padding:16px 18px;font-size:18px;line-height:1.55;color:var(--muted)}
+.reasons li strong{display:block;font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.15rem;line-height:1.3;color:var(--ink);margin-bottom:4px}
