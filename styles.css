@@ -150,3 +150,5 @@ footer .small{color:#C3CFE3}
 .t-card ul{list-style:none;padding:0;margin:.4em 0 0}
 .t-card ul li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding:6px 0;font-size:1rem}
 .t-card ul li strong{font-family:"Fraunces",Georgia,serif;white-space:nowrap}
+/* Easy to read on a phone: small print at 18px (Rickey Oct 20 copy review) */
+.small,.note,.hint,.source{font-size:18px}
