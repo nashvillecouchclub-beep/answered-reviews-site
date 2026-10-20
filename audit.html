@@ -8,15 +8,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html">Answered Reviews</a>
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Answered Reviews<small>YOUR REPUTATION, ON REPLY</small></a>
     <nav class="links" aria-label="Main">
       <a href="index.html#plans">Prices</a>
-      <a class="call" href="tel:+16159562113">615.956.2113</a>
+      <a href="everything.html">Everything we do</a>
+      <a class="cta" href="audit.html">Free replies</a>
     </nav>
   </div>
 </header>
@@ -24,17 +26,18 @@
 <main>
 <section>
   <div class="wrap narrow">
-    <h1>Get a free audit of your Google reviews</h1>
-    <p class="lead">Tell us your business name and where to send it. We look at your Google profile and email you a one page audit, usually within an hour on weekdays, 9 am to 5 pm Central.</p>
+    <h1>Get last month's review replies, free</h1>
+    <p class="lead">Tell us your business name and where to send it. We write replies to last month's unanswered Google reviews and email them to you within 24 hours, with a one page audit of your profile. Yours to post, no strings.</p>
     <div class="card" style="margin-bottom:28px">
       <h3>What you get</h3>
       <ul>
         <li>Your <strong>Answered Score</strong>, out of 100: how well your business keeps up with its Google reviews</li>
         <li>How many of your reviews are still waiting on a reply</li>
         <li>How your Answered Score compares with nearby businesses like yours</li>
+        <li>Ready to post replies for last month's unanswered reviews</li>
         <li>3 simple things you can do yourself this week</li>
       </ul>
-      <p class="note" style="margin:0">Free and yours to keep. No call needed. We may send a few short tips over the next month; reply stop any time.</p>
+      <p class="note" style="margin:0">Free and yours to keep. We may send a few short tips over the next month; reply stop any time.</p>
     </div>
 
     <form id="audit" action="https://formsubmit.co/rickey@answeredreviewsco.com" method="POST">
@@ -52,14 +55,14 @@
       <div class="field">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required autocomplete="email">
-        <span class="hint">We send the audit here, plus a few short tips. Reply stop any time.</span>
+        <span class="hint">We send your replies and audit here, plus a few short tips. Reply stop any time.</span>
       </div>
       <div class="field">
         <label for="city">City or Google Maps link <span class="hint" style="display:inline">(optional)</span></label>
         <input type="text" id="city" name="City or Google link">
         <span class="hint">Helps us find the right listing if your name is common.</span>
       </div>
-      <button class="btn block" type="submit">Send me my free audit</button>
+      <button class="btn block" type="submit">Send me my free replies</button>
     </form>
   </div>
 </section>
@@ -67,11 +70,12 @@
 
 <footer>
   <div class="wrap">
-    <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
-    <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
-    <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
-    <p><a href="referral.html">Referral partners</a> | <a href="https://support.google.com/business/answer/7353941" rel="noopener">Google's rules for businesses like ours</a></p>
-    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google.</p>
+    <p><strong>Answered Reviews</strong>, your reputation, on reply.</p>
+    <p>P.O. Box 1166, Smyrna, TN 37167</p>
+    <p><a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
+    <p><a href="audit.html">Free replies</a> | <a href="reply.html">Free reply to one review</a> | <a href="everything.html">Everything we do</a> | <a href="terms.html">Client terms</a> | <a href="referral.html">Referral partners</a> | <a href="whitelabel.html">White label</a></p>
+    <p>For your business: <a href="trades/restaurants.html">Restaurants and bars</a> | <a href="trades/salons.html">Salons and barbers</a> | <a href="trades/homeservices.html">Home services</a> | <a href="trades/auto.html">Auto shops</a> | <a href="trades/retail.html">Retail and furniture</a> | <a href="trades/furniture.html">Furniture stores</a> | <a href="trades/consignment.html">Consignment shops</a> | <a href="trades/moving.html">Moving companies</a></p>
+    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google. No contract, cancel any time. <a href="https://support.google.com/business/answer/7353941" rel="noopener">Google's rules for businesses like ours</a>.</p>
   </div>
 </footer>
 <script src="ref.js"></script>

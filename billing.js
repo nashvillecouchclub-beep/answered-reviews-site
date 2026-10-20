@@ -1,4 +1,4 @@
-// Price page: yearly is pre-selected (Agency plan v3 addendum). The founding offer stays monthly.
+// Price page: monthly is pre-selected (Oct 20 2026); yearly shows the prepay price (2 months free).
 (function () {
   var pills = document.querySelectorAll(".billing-toggle .pill");
   if (!pills.length) { return; }
@@ -18,5 +18,5 @@
     });
   }
   pills.forEach(function (p) { p.addEventListener("click", function () { set(p.getAttribute("data-billing")); }); });
-  set("yearly");
+  set("monthly");
 })();

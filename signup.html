@@ -8,13 +8,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html">Answered Reviews</a>
-    <a class="call" href="tel:+16159562113">615.956.2113</a>
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Answered Reviews<small>YOUR REPUTATION, ON REPLY</small></a>
+    <nav class="links" aria-label="Main">
+      <a href="index.html#plans">Prices</a>
+      <a href="everything.html">Everything we do</a>
+      <a class="cta" href="audit.html">Free replies</a>
+    </nav>
   </div>
 </header>
 
@@ -22,7 +27,7 @@
 <section>
   <div class="wrap narrow">
     <h1>Sign up</h1>
-    <p class="lead">This takes about 3 minutes. No card is needed here. We email you a QuickBooks invoice after you send this form, and no work starts until it is paid.</p>
+    <p class="lead">This takes about 3 minutes. No card is needed here. After you send it, we email you a link to save your card on Square's secure page. Nothing is charged until your first job or first month is delivered.</p>
 
     <form id="signup" action="https://formsubmit.co/rickey@answeredreviewsco.com" method="POST">
       <input type="hidden" name="_subject" value="New sign up: Answered Reviews">
@@ -39,33 +44,30 @@
         <select id="plan" name="Plan" required>
           <option value="Google Profile Tune Up, $49 one time" data-key="tuneup">Google Profile Tune Up, $49 one time</option>
           <option value="Review Catch Up, one time, priced by backlog" data-key="catchup">Review Catch Up, one time</option>
-          <option value="Replies, $99 a month" data-key="replies">Replies, $99 a month</option>
-          <option value="Replies + Posts, $249 a month" data-key="posts">Replies + Posts, $249 a month</option>
-          <option value="Founding offer: Replies + Posts, $99 a month for the first 3 monthly bills, then $249 a month" data-key="founding">Founding offer: Replies + Posts, $99 a month for the first 3 monthly bills</option>
-          <option value="Full, $499 a month" data-key="full">Full, $499 a month</option>
+          <option value="Replies, $79 a month" data-key="replies">Replies, $79 a month</option>
+          <option value="Replies + Posts, $149 a month" data-key="posts">Replies + Posts, $149 a month</option>
+          <option value="Full, $299 a month" data-key="full">Full, $299 a month</option>
         </select>
         <p id="plan-desc" class="note" style="margin:10px 0 0"></p>
 
         <div id="catchup-size" class="field hidden" style="margin:16px 0 0">
           <label for="backlog">About how many 1 to 3 star reviews have no reply?</label>
           <select id="backlog" name="Catch Up size">
-            <option value="Up to 15 unanswered, $149" data-price="149">Up to 15, $149</option>
-            <option value="16 to 40 unanswered, $299" data-price="299">16 to 40, $299</option>
-            <option value="41 to 100 unanswered, $499" data-price="499">41 to 100, $499</option>
+            <option value="Up to 15 unanswered, $99" data-price="99">Up to 15, $99</option>
+            <option value="16 to 40 unanswered, $199" data-price="199">16 to 40, $199</option>
+            <option value="41 to 100 unanswered, $349" data-price="349">41 to 100, $349</option>
             <option value="More than 100 unanswered, by quote" data-price="quote">More than 100, by quote</option>
           </select>
-          <span class="hint">Not sure? Pick your best guess. We count them before we invoice and use the lower price if you guessed high. If there are more than you guessed, we email the new price and start only after you OK it.</span>
+          <span class="hint">Not sure? Pick your best guess. We count them before we charge and use the lower price if you guessed high. If there are more than you guessed, we email the new price and start only after you OK it.</span>
         </div>
 
-        <div id="kit-field" class="field hidden" style="margin:16px 0 0">
-          <label class="check"><input type="checkbox" id="kit" name="QR review card kit" value="Yes, add the printed kit for $59 (shipped)"> Add a printed QR review card kit with a counter stand, $59 shipped</label>
-        </div>
 
         <div id="billing-field" class="field hidden" style="margin:16px 0 0">
           <span class="label">How would you like to pay?</span>
           <div class="radios">
-            <label><input type="radio" name="Billing" value="Yearly, 2 months free" checked> Yearly, pay for 10 months and get 12</label>
-            <label><input type="radio" name="Billing" value="Monthly"> Monthly, autopay</label>
+            <label><input type="radio" name="Billing" value="Monthly" checked> Monthly, charged after each month is delivered</label>
+            <label><input type="radio" name="Billing" value="Prepay 3 months, 10% off"> Prepay 3 months, 10% off</label>
+            <label><input type="radio" name="Billing" value="Yearly, 2 months free"> Prepay a year, pay for 10 months and get 12</label>
           </div>
         </div>
       </div>
@@ -73,7 +75,7 @@
       <fieldset>
         <legend>Fees, in writing</legend>
         <div class="okbox"><p id="fee-text"></p></div>
-        <p class="small">Google Business Profile itself is free from Google. You pay us only for our work. No contract and no fee to leave. You can cancel any time by email.</p>
+        <p class="small">Google Business Profile itself is free from Google. You pay us only for our work. No contract and no fee to leave. You can cancel any time by email. Sign up offers (pick one): half off your first month or first fee if you sign within 7 days of your free replies, 10% off if you prepay 3 months, or 2 months free if you prepay a year. Full <a href="terms.html">client terms</a>.</p>
         <label class="check"><input type="checkbox" name="Saw all fees" value="Yes" required> I have read the fees above</label>
       </fieldset>
 
@@ -90,7 +92,7 @@
         <div class="field">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required autocomplete="email">
-          <span class="hint">Your QuickBooks invoice goes here.</span>
+          <span class="hint">Your card link, notices and receipts go here.</span>
         </div>
         <div class="field">
           <label for="phone">Phone <span class="hint" style="display:inline">(optional)</span></label>
@@ -98,7 +100,7 @@
         </div>
         <div class="field">
           <label for="trade">What kind of business is it?</label>
-          <input type="text" id="trade" name="Trade" required placeholder="restaurant, HVAC, dental office, salon">
+          <input type="text" id="trade" name="Trade" required placeholder="restaurant, salon, HVAC, auto shop, furniture store">
         </div>
         <div class="field">
           <label for="gbp">Google Business Profile link or business address</label>
@@ -152,10 +154,12 @@
 
 <footer>
   <div class="wrap">
-    <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
-    <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
-    <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
-    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google. No contract, cancel any time.</p>
+    <p><strong>Answered Reviews</strong>, your reputation, on reply.</p>
+    <p>P.O. Box 1166, Smyrna, TN 37167</p>
+    <p><a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
+    <p><a href="audit.html">Free replies</a> | <a href="reply.html">Free reply to one review</a> | <a href="everything.html">Everything we do</a> | <a href="terms.html">Client terms</a> | <a href="referral.html">Referral partners</a> | <a href="whitelabel.html">White label</a></p>
+    <p>For your business: <a href="trades/restaurants.html">Restaurants and bars</a> | <a href="trades/salons.html">Salons and barbers</a> | <a href="trades/homeservices.html">Home services</a> | <a href="trades/auto.html">Auto shops</a> | <a href="trades/retail.html">Retail and furniture</a> | <a href="trades/furniture.html">Furniture stores</a> | <a href="trades/consignment.html">Consignment shops</a> | <a href="trades/moving.html">Moving companies</a></p>
+    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google. No contract, cancel any time. <a href="https://support.google.com/business/answer/7353941" rel="noopener">Google's rules for businesses like ours</a>.</p>
   </div>
 </footer>
 
@@ -163,19 +167,17 @@
 (function(){
   var plans = {
     tuneup:  {desc: "We check and correct your hours, categories, description, services and photos, plus a printable review QR card.",
-              fee: "Google Profile Tune Up: $49, one time, invoiced after you send this form. No monthly charge.", monthly: false},
+              fee: "Google Profile Tune Up: $49, one time, charged to your saved card after the tune up is delivered and you sign off. No monthly charge.", monthly: false},
     catchup: {desc: "A calm, honest reply to every old 1 to 3 star review with no reply. You OK each one before it is posted.",
               fee: null, monthly: false},
-    replies: {desc: "A reply to every new Google review (up to about 30 a month) within 48 hours, plus a monthly report.",
-              fee: "Replies: $99 a month, billed monthly with autopay, or $990 a year if you pay yearly (if you cancel early, we charge the months used at the monthly price and refund the rest). No setup fee.", monthly: true},
-    posts:   {desc: "Everything in Replies, plus one Google Business Profile post every week. Replies within 48 hours.",
-              fee: "Replies + Posts: $249 a month, billed monthly with autopay, or $2,490 a year if you pay yearly (if you cancel early, we charge the months used at the monthly price and refund the rest). No setup fee.", monthly: true},
-    founding:{desc: "Replies + Posts for $99 a month for your first 3 monthly bills, then the normal $249. First 5 clients only.",
-              fee: "Founding offer: Replies + Posts at $99 a month for your first 3 monthly invoices, then $249 a month, billed monthly with autopay. No setup fee. Not with yearly billing or a Catch Up credit. This price is written into your agreement.", monthly: true, noYearly: true},
-    full:    {desc: "Everything in Replies + Posts, same day replies, review request emails to your customers, and a monthly results email.",
-              fee: "Full: $499 a month, billed monthly with autopay, or $4,990 a year if you pay yearly (if you cancel early, we charge the months used at the monthly price and refund the rest). No setup fee.", monthly: true}
+    replies: {desc: "A reply to every new Google review (up to about 30 a month), posted within 24 hours of your OK, plus a monthly report.",
+              fee: "Replies: $79 a month, charged to your saved card after each month is delivered, or $790 a year if you prepay a year (if you cancel early, we charge the months used at the monthly price and refund the rest). No setup fee. We email you 3 to 4 days before each charge.", monthly: true},
+    posts:   {desc: "Everything in Replies, plus one Google Business Profile post every week. Posted within 24 hours of your OK.",
+              fee: "Replies + Posts: $149 a month, charged to your saved card after each month is delivered, or $1,490 a year if you prepay a year (if you cancel early, we charge the months used at the monthly price and refund the rest). No setup fee. We email you 3 to 4 days before each charge.", monthly: true},
+    full:    {desc: "Everything in Replies + Posts, posted within 4 hours of your OK, review request emails to your customers, and a monthly results email.",
+              fee: "Full: $299 a month, charged to your saved card after each month is delivered, or $2,990 a year if you prepay a year (if you cancel early, we charge the months used at the monthly price and refund the rest). No setup fee. We email you 3 to 4 days before each charge.", monthly: true}
   };
-  var auth = "[Business name] authorizes Rickey Hallor Jr to send review requests to our customers who agreed to receive emails, and to draft and post replies to our Google reviews on our behalf.";
+  var auth = "[Business name] authorizes Answered Reviews (Rickey Hallor Jr) to act as our vendor and agent, in our name, to draft and post replies to our Google reviews and, on plans that include it, to send review requests to our customers who agreed to receive emails. We agree to the client terms at getansweredreviews.com/terms.html, including the saved card charges described above.";
   var sel = document.getElementById("plan"), desc = document.getElementById("plan-desc");
   var size = document.getElementById("catchup-size"), backlog = document.getElementById("backlog");
   var billing = document.getElementById("billing-field"), feeText = document.getElementById("fee-text"), fees = document.getElementById("fees");
@@ -188,20 +190,16 @@
     billing.classList.toggle("hidden", !p.monthly || p.noYearly);
     if (!p.monthly || p.noYearly) { billing.querySelector('input[value="Monthly"]').checked = true; }
     else if (!userPicked) {
-      var want = (new URLSearchParams(location.search).get("billing") || "yearly").toLowerCase();
-      billing.querySelector(want === "monthly" ? 'input[value="Monthly"]' : 'input[value^="Yearly"]').checked = true;
+      var want = (new URLSearchParams(location.search).get("billing") || "monthly").toLowerCase();
+      billing.querySelector(want === "yearly" ? 'input[value^="Yearly"]' : 'input[value="Monthly"]').checked = true;
     }
     var f = p.fee;
     if (k === "catchup") {
       var price = backlog.options[backlog.selectedIndex].getAttribute("data-price");
       f = price === "quote"
-        ? "Review Catch Up, more than 100 unanswered: by quote. We count your unanswered 1 to 3 star reviews and email you a written price. Nothing is invoiced and no work starts until you OK it."
-        : "Review Catch Up: $" + price + ", one time, invoiced after we count your unanswered 1 to 3 star reviews. If you start the $249 or $499 monthly plan within 30 days, this fee comes off your first month, up to that month's price. Not with Replies or the founding offer.";
+        ? "Review Catch Up, more than 100 unanswered: by quote. We count your unanswered 1 to 3 star reviews and email you a written price. Nothing is charged and no work starts until you OK it."
+        : "Review Catch Up: $" + price + ", one time, charged to your saved card after the replies are delivered and you sign off. If you start a monthly plan within 30 days, this fee comes off your first month, up to that month's price.";
     }
-    var kitOk = (k === "tuneup" || k === "replies");
-    kitBox.classList.toggle("hidden", !kitOk);
-    if (!kitOk) { kit.checked = false; }
-    if (kit.checked) { f += " Printed QR review card kit: $59, one time, shipped (plus Tennessee sales tax if it applies)."; }
     feeText.textContent = f;
     fees.value = f;
   }
@@ -214,8 +212,6 @@
   var q = (new URLSearchParams(location.search).get("plan") || "").toLowerCase();
   for (var i = 0; i < sel.options.length; i++) { if (sel.options[i].getAttribute("data-key") === q) { sel.selectedIndex = i; } }
   var userPicked = false;
-  var kitBox = document.getElementById("kit-field"), kit = document.getElementById("kit");
-  kit.addEventListener("change", show);
   billing.querySelectorAll("input").forEach(function (r) { r.addEventListener("change", function () { userPicked = true; }); });
   show(); showAuth();
   sel.addEventListener("change", show);

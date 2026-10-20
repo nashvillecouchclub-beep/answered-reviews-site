@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 <style>
 /* Phone first: the whole form and its button fit on the first screen of a phone (playbook: button visible without scrolling). */
@@ -29,8 +30,12 @@ header.top{padding:10px 0}
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="index.html">Answered Reviews</a>
-    <a class="call" href="tel:+16159562113">615.956.2113</a>
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Answered Reviews<small>YOUR REPUTATION, ON REPLY</small></a>
+    <nav class="links" aria-label="Main">
+      <a href="index.html#plans">Prices</a>
+      <a href="everything.html">Everything we do</a>
+      <a class="cta" href="audit.html">Free replies</a>
+    </nav>
   </div>
 </header>
 
@@ -61,9 +66,6 @@ header.top{padding:10px 0}
         <label class="sr" for="email">Email</label>
         <input type="email" id="email" name="email" required autocomplete="email" placeholder="Your email">
       </div>
-      <div class="field">
-        <label class="check"><input type="checkbox" name="Health practice" value="yes"> Dental, medical, therapy or vet practice</label>
-      </div>
       <div class="sticky-send"><button class="btn block" type="submit">Email me my free reply</button></div>
       <p class="after-send">We send your reply to that email, plus a few short tips. Reply stop any time.</p>
     </form>
@@ -72,9 +74,8 @@ header.top{padding:10px 0}
       <h3>What you get</h3>
       <ul>
         <li>A reply of 2 or 3 sentences you can copy and post on Google</li>
-        <li>For a tough review: calm, owns the problem, and invites the customer to call you. Never an argument.</li>
-        <li>Health practices: the reply never says the person was a patient, to keep their privacy.</li>
-        <li>Usually by the next business day. Free and yours to keep. No call needed.</li>
+        <li>For a tough review: calm, owns the problem, and invites the customer to reach out to you. Never an argument.</li>
+                <li>Usually by the next business day. Free and yours to keep.</li>
       </ul>
       <p class="note" style="margin:0">Want every review answered for you? <a href="index.html#plans">See prices</a>. No contract, cancel any time.</p>
     </div>
@@ -84,10 +85,12 @@ header.top{padding:10px 0}
 
 <footer>
   <div class="wrap">
-    <p><strong>Answered Reviews</strong>, Smyrna, Tennessee</p>
-    <p>2606 Gregory Mills Drive, Smyrna, TN 37167</p>
-    <p><a href="tel:+16159562113">615.956.2113</a> | <a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
-    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google.</p>
+    <p><strong>Answered Reviews</strong>, your reputation, on reply.</p>
+    <p>P.O. Box 1166, Smyrna, TN 37167</p>
+    <p><a href="mailto:rickey@answeredreviewsco.com">rickey@answeredreviewsco.com</a></p>
+    <p><a href="audit.html">Free replies</a> | <a href="reply.html">Free reply to one review</a> | <a href="everything.html">Everything we do</a> | <a href="terms.html">Client terms</a> | <a href="referral.html">Referral partners</a> | <a href="whitelabel.html">White label</a></p>
+    <p>For your business: <a href="trades/restaurants.html">Restaurants and bars</a> | <a href="trades/salons.html">Salons and barbers</a> | <a href="trades/homeservices.html">Home services</a> | <a href="trades/auto.html">Auto shops</a> | <a href="trades/retail.html">Retail and furniture</a> | <a href="trades/furniture.html">Furniture stores</a> | <a href="trades/consignment.html">Consignment shops</a> | <a href="trades/moving.html">Moving companies</a></p>
+    <p class="small">Answered Reviews is an independent service and is not part of Google. Google Business Profile is free from Google. No contract, cancel any time. <a href="https://support.google.com/business/answer/7353941" rel="noopener">Google's rules for businesses like ours</a>.</p>
   </div>
 </footer>
 <script src="ref.js"></script>
