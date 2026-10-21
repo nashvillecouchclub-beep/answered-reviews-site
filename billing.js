@@ -12,9 +12,11 @@
       el.innerHTML = el.getAttribute("data-" + mode);
     });
     document.querySelectorAll("a[data-plan-link]").forEach(function (a) {
-      var u = new URL(a.getAttribute("href"), location.href);
+      // Keep the link's own folder (../signup.html on business type pages) so it never points at trades/signup.html.
+      var href = a.getAttribute("href");
+      var u = new URL(href, location.href);
       u.searchParams.set("billing", mode);
-      a.setAttribute("href", u.pathname.split("/").pop() + u.search);
+      a.setAttribute("href", href.split("?")[0] + u.search);
     });
   }
   pills.forEach(function (p) { p.addEventListener("click", function () { set(p.getAttribute("data-billing")); }); });

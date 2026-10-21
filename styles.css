@@ -261,12 +261,14 @@ ol.plain li{margin-bottom:.4em}
 
 /* ---------- Meet Rickey ---------- */
 .meet{display:grid;gap:24px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:24px;padding:28px 22px;margin-bottom:56px}
-.meet-photo{width:180px;height:180px;border-radius:32px;object-fit:cover;object-position:50% 30%;background:var(--soft);box-shadow:10px 10px 0 var(--accent),var(--shadow-md)}
+.meet-photo{width:230px;height:auto;aspect-ratio:9/16;justify-self:center;border-radius:32px;object-fit:cover;object-position:50% 50%;background:var(--soft);box-shadow:10px 10px 0 var(--accent),var(--shadow-md)}
 .meet-copy h2{margin-bottom:.3em}
+/* Meet Rickey sits in its own section at the bottom of the home page (Rickey Oct 20 7:39 pm) */
+.meet-section .meet{margin-bottom:0}
 .meet-copy p{font-size:1.18rem;line-height:1.65;color:var(--muted);margin:0;max-width:36em}
 @media (min-width:720px){
-  .meet{grid-template-columns:200px minmax(0,1fr);gap:48px;padding:44px}
-  .meet-photo{width:196px;height:196px}
+  .meet{grid-template-columns:260px minmax(0,1fr);gap:48px;padding:44px}
+  .meet-photo{width:260px}
 }
 
 /* ---------- Scroll fade in (site.js adds .reveal only when motion is welcome) ---------- */
