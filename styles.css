@@ -158,3 +158,8 @@ footer .small{color:#C3CFE3}
 .reasons{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
 .reasons li{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:12px;padding:16px 18px;font-size:18px;line-height:1.55;color:var(--muted)}
 .reasons li strong{display:block;font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:1.15rem;line-height:1.3;color:var(--ink);margin-bottom:4px}
+
+/* Photos (Rickey Oct 20 6:51 pm): one photo of the business type under the hero buttons. Fixed aspect box, never wider than the screen. */
+.photo{margin:24px 0 0;width:100%;aspect-ratio:3/2;border-radius:16px;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover}
+@media (min-width:720px){.photo{aspect-ratio:16/9}}
