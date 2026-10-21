@@ -4,10 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Your Results | Answered Reviews</title>
+<meta name="description" content="Your Answered Reviews monthly report.">
+<meta name="theme-color" content="#0E2747">
+<link rel="canonical" href="https://getansweredreviews.com/results/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Answered Reviews">
+<meta property="og:title" content="Your Results | Answered Reviews">
+<meta property="og:description" content="Your Answered Reviews monthly report.">
+<meta property="og:url" content="https://getansweredreviews.com/results/">
+<meta property="og:image" content="https://images.pexels.com/photos/34353697/pexels-photo-34353697.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your Results | Answered Reviews">
+<meta name="twitter:description" content="Your Answered Reviews monthly report.">
+<meta name="twitter:image" content="https://images.pexels.com/photos/34353697/pexels-photo-34353697.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../styles.css">
 <!--
@@ -21,10 +34,12 @@
 -->
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="../index.html"><span class="mark" aria-hidden="true"></span>Answered Reviews<small>YOUR REPUTATION, ON REPLY</small></a>
-    <nav class="links" aria-label="Main">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-bars" aria-hidden="true"><span></span></span><span class="nav-toggle-label">Menu</span></button>
+    <nav class="links" id="site-nav" aria-label="Main">
       <a href="../index.html#plans">Prices</a>
       <a href="../everything.html">Everything we do</a>
       <a class="cta" href="../audit.html">Free replies</a>
@@ -32,7 +47,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 <section>
   <div class="wrap narrow">
     <div id="missing" class="hidden">
@@ -142,5 +157,6 @@
   }).catch(missing);
 })();
 </script>
+<script src="../site.js" defer></script>
 </body>
 </html>

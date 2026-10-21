@@ -7,7 +7,7 @@ Every photo is free for commercial use with no attribution required, under the l
 - Pexels License: https://www.pexels.com/license/
 
 Photos are linked straight from images.unsplash.com and images.pexels.com (both allow hotlinking). They are stock photos of the trade, not our clients' work.
-The Meet Rickey photo spot on the home page is saved for Rickey's own photo.
+Meet Rickey headshot (home page): Rickey's own image from his Higgsfield library, approved by Rickey on Oct 20 2026. It is not a stock photo. Hotlinked from https://d8j0ntlcm91z4.cloudfront.net/user_3Jk0UlM468OQEI2G7g576xD2uKy/hf_20261019_183512_48ad61dd-9600-4700-bcd3-7fc210eece9a.png
 
 | Page | Shows | Photo page | License |
 |---|---|---|---|

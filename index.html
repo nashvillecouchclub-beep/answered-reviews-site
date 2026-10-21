@@ -5,17 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Answered Reviews | Every Google review answered, in your style</title>
 <meta name="description" content="We answer every Google review for your business, in your style. No software to buy, nothing to learn. Plans from $79 a month, or a $49 Google profile tune up. No contract.">
+<meta name="theme-color" content="#0E2747">
+<link rel="canonical" href="https://getansweredreviews.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Answered Reviews">
+<meta property="og:title" content="Answered Reviews | Every Google review answered, in your style">
+<meta property="og:description" content="We answer every Google review for your business, in your style. No software to buy, nothing to learn. Plans from $79 a month, or a $49 Google profile tune up. No contract.">
+<meta property="og:url" content="https://getansweredreviews.com/">
+<meta property="og:image" content="https://images.pexels.com/photos/34353697/pexels-photo-34353697.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=960">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Answered Reviews | Every Google review answered, in your style">
+<meta name="twitter:description" content="We answer every Google review for your business, in your style. No software to buy, nothing to learn. Plans from $79 a month, or a $49 Google profile tune up. No contract.">
+<meta name="twitter:image" content="https://images.pexels.com/photos/34353697/pexels-photo-34353697.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=960">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span>Answered Reviews<small>YOUR REPUTATION, ON REPLY</small></a>
-    <nav class="links" aria-label="Main">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-bars" aria-hidden="true"><span></span></span><span class="nav-toggle-label">Menu</span></button>
+    <nav class="links" id="site-nav" aria-label="Main">
       <a href="index.html#plans">Prices</a>
       <a href="everything.html">Everything we do</a>
       <a class="cta" href="audit.html">Free replies</a>
@@ -23,9 +37,10 @@
   </div>
 </header>
 
-<main>
-<section class="hero">
-  <div class="wrap narrow">
+<main id="main">
+<section class="hero hero-has-photo">
+  <div class="wrap hero-split">
+  <div class="hero-copy">
     <p class="kicker">Your reputation, on reply</p>
     <h1>Every Google review answered, in your style. You never type one.</h1>
     <p class="lead">The next customer who checks you on Google reads the replies as much as the reviews. We make sure every reviewer hears back from you, kindly and honestly.</p>
@@ -39,7 +54,10 @@
       <a class="btn ghost" href="#plans">See prices</a>
     </div>
     <p class="note" style="margin-top:12px">We write replies to last month's unanswered reviews, free, and email them to you. Yours to post, no strings.</p>
-    <figure class="photo"><img src="https://images.pexels.com/photos/34353697/pexels-photo-34353697.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Cozy cafe with plants and a big front window" width="1200" height="800" decoding="async" fetchpriority="high"></figure>
+  </div>
+  <div class="hero-media">
+    <figure class="photo"><img src="https://images.pexels.com/photos/34353697/pexels-photo-34353697.jpeg?auto=compress&cs=tinysrgb&w=960" alt="Cozy cafe with plants and a big front window" width="1200" height="800" decoding="async" fetchpriority="high"></figure>
+  </div>
   </div>
 </section>
 
@@ -206,7 +224,14 @@
 
 <section class="alt" id="why">
   <div class="wrap narrow">
-    <!-- Meet Rickey photo spot: Rickey will send his own photo for here. Never use a stock photo of a person in this spot. -->
+    <!-- Meet Rickey: Rickey approved his own headshot (his Higgsfield library) and this bio word for word, Oct 20 2026. -->
+    <div class="meet" id="meet-rickey">
+      <img class="meet-photo" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Jk0UlM468OQEI2G7g576xD2uKy/hf_20261019_183512_48ad61dd-9600-4700-bcd3-7fc210eece9a.png" alt="Rickey Hallor" width="1536" height="1536" loading="lazy" decoding="async">
+      <div class="meet-copy">
+        <h2>Meet Rickey.</h2>
+        <p>I'm Rickey Hallor, a small business owner in the Nashville area. Running my own business taught me how much money slips away in the small things nobody has time for, like following up on a quote or answering a review. So I started this for other business owners like myself. My team uses smart tools to handle that work for you, and I stay personally involved, so nothing goes out under your name until you say OK.</p>
+      </div>
+    </div>
     <h2>Why Answered Reviews</h2>
     <ul class="checks">
       <li>Our main job: answer your Google reviews. Every review, every week.</li>
@@ -281,5 +306,6 @@
 </footer>
 <script src="ref.js"></script>
 <script src="billing.js"></script>
+<script src="site.js" defer></script>
 </body>
 </html>
