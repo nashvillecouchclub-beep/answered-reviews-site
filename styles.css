@@ -266,6 +266,7 @@ ol.plain li{margin-bottom:.4em}
 /* Meet Rickey sits in its own section at the bottom of the home page (Rickey Oct 20 7:39 pm) */
 .meet-section .meet{margin-bottom:0}
 .meet-copy p{font-size:1.18rem;line-height:1.65;color:var(--muted);margin:0;max-width:36em}
+.meet-copy p+p{margin-top:.9em}
 @media (min-width:720px){
   .meet{grid-template-columns:260px minmax(0,1fr);gap:48px;padding:44px}
   .meet-photo{width:260px}
